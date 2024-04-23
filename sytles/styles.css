@@ -8,6 +8,8 @@
     --font-color: #e2e2e2;
     --shadow-color: rgba(26, 27, 28, 1);
     --main-font: "Montserrat", sans-serif;
+    --paragraph-font-size: 1.25rem;
+    --title-font-size: 3rem;
 }
 
 html{
@@ -29,7 +31,7 @@ p {
     font-weight: 600;
 
     text-align: left;
-    font-size: 1.5rem;
+    font-size: var(--font-size);
 }
 
 .header { /*Cabeçalho*/
@@ -45,7 +47,9 @@ p {
 }
 
 .header__logo{ /*Logo do cabeçalho*/
-    width: 5em;
+    width: 2em;
+    height: 2em;
+    padding: 1.25em 0;
 }
 
 .header__menu{ /*Menu do cabeçalho*/
@@ -64,7 +68,7 @@ p {
     color: var(--second-color);
     font-family: var(--main-font);
     text-shadow: var(--second-color) 0px 0px 2px;
-    font-size: 3rem;
+    font-size: var(--title-font-size);
     font-weight: 700;
 }
 
@@ -72,15 +76,18 @@ p {
     text-align: center;
     color: var(--font-color);
     font-family: var(--main-font);
-    font-size: 3rem;
+    font-size: var(--title-font-size);
     font-weight: 700;
 }
 
 .main__presentation{ /*Seção de introdução*/
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
     justify-content: space-between;
-    padding: 12em 10em;
-    height: 20em;
+    align-items: center;
+    padding: 1em 10em;
+    height: 100vh;
 
     background-image: url(/assets/background-image.png); 
     background-size: cover;
@@ -98,7 +105,7 @@ p {
 .main__presentation__description__name{ /*Nome*/
     color: var(--font-color);
     font-family: var(--main-font);
-    font-size: 3rem;
+    font-size: var(--title-font-size);
     font-weight: 700;
 }
 
@@ -107,7 +114,7 @@ p {
     font-family: var(--main-font);
     text-decoration: none;
     text-align: center;
-    font-size: 1.25rem;
+    font-size: var(--paragraph-font-size);
     font-weight: 600;
 
     width: fit-content;
@@ -122,7 +129,7 @@ p {
     justify-content: space-between;
     height: 10em;
     padding-left: 1em;
-    margin-top: 8em;
+    margin-top: 10%;
     border-left: 8px solid var(--second-color);
 }
 
@@ -186,8 +193,8 @@ p {
 
     background-color: var(--third-color);
     border-radius: 1.5em;
-    height: 12.5em;
-    width: 20em;
+    height: 12em;
+    width: 16em;
 }
 
 .main__skills__content__icons{
@@ -197,7 +204,7 @@ p {
     flex-wrap: wrap;
 
     gap: 1em;
-    position:absolute;
+    position: absolute;
     margin: 0em 7.5em;
     width: fit-content;
 }
@@ -207,8 +214,8 @@ p {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 12.5em;
-    width: 20em;
+    height: 12em;
+    width: 16em;
 }
 
 .skills__icon{
@@ -238,13 +245,13 @@ p {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    padding: 0em 2em;
     gap: 1.5em;
 
-    width: 36em;
+    width: 30em;
     height: 5em;
     background-color: var(--fourth-color);
     border-radius: 1.5em;
-    padding-left: 2.5em;
 }
 
 .main__projects{
@@ -263,8 +270,8 @@ p {
 }
 
 .main__projects__content__rectangle{
-    width: 376.369px;
-    height: 275px;
+    width: 22em;
+    height: 15em;
     border-radius: 1.5em;
     background-color: var(--fourth-color);
 }
@@ -320,4 +327,35 @@ p {
     text-align: left;
     font-size: 1rem;
     text-align: center;
+}
+
+/* Media Query para Dispositivos Mobile */
+@media (max-width: 480px) {
+    :root{
+        --paragraph-font-size: 1.5rem;
+        --title-font-size: 4rem;
+    }
+
+    p{
+        font-size: var(--paragraph-font-size);
+    }
+
+    .header{
+        padding: 0em 2em;
+    }
+
+    .header__logo{
+        width: 2em;
+        height: 2em;
+        padding: .5em 0;
+    }
+
+    .header__menu{
+        display: none;
+    }
+}
+ 
+/* Media Query para Tablets e Ipads */
+@media (min-width: 481px) and (max-width: 1025px) {
+
 }
