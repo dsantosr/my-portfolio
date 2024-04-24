@@ -5,12 +5,13 @@
     --highlight-color: #fec76a;
     --third-color: #3D3E42;
     --fourth-color: #262728;
-    --font-color: #e2e2e2;
 
-    --shadow-color: rgba(26, 27, 28, 1);
+    --font-color: #e2e2e2;
     --main-font: "Montserrat", sans-serif;
     --paragraph-font-size: 1.5rem;
     --title-font-size: 3rem;
+
+    --shadow-color: rgba(26, 27, 28, 1);
 }
 
 html{ /*Suaviza o movimento ativado pelas ancoras de navegação*/
@@ -44,6 +45,7 @@ p { /*Parágrafo*/
 
     text-align: left;
     font-size: var(--paragraph-font-size);
+    line-height: normal;
 }
 
 strong{ /*Destaque para negrito*/
@@ -248,7 +250,7 @@ strong{ /*Destaque para negrito*/
     padding: 0em 2em;
     gap: 1.5em;
 
-    width: 20em;
+    width: 18em;
     height: 4em;
     background-color: var(--fourth-color);
     border-radius: 1.5em;
@@ -263,7 +265,7 @@ strong{ /*Destaque para negrito*/
 .main__certificates__content__rectangle:hover{ /*HOVER: Retangulo*/
     color:var(--highlight-color);
     background-color: var(--third-color);
-    transition: .4s;
+    transition: all ease .3s;
 }
 
 /*Seção de projetos*/
@@ -271,34 +273,63 @@ strong{ /*Destaque para negrito*/
     display: flex;
     flex-direction: column;
     padding: 5em 7.5em;
-    gap: 1em; 
+    gap: 3em;
+    height: 100vh;
 }
-.main__projects__content{
+.main__projects__content{ /*Bloco da seção de projetos*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1em;
+    gap: 2em;
 }
-.main__projects__content__rectangle{
-    width: 22em;
+.main__projects__content__rectangle{ /*Bloco da seção de projetos*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: em;
+
+    width: 19em;
     height: 15em;
     border-radius: 1.5em;
-    background-color: var(--fourth-color);
+    box-shadow: 0px 0px 4px 0px var(--highlight-color); 
+    background-color: var(--background-color);
+    padding: 1.5em 1.5em;
 }
+.main__projects__content__rectangle__link__title{
+    font-size: 1em;
+}
+.main__projects__content__rectangle__link{ /*Retangulo com informações do projeto*/
+    display: flex;
+    flex-direction: row;
+    gap: 1.25em;
+}
+.main__projects__content__rectangle__link:hover > *{ /*HOVER: Brilho para icone e titulo do projeto*/
+    text-shadow: var(--highlight-color) 0px 0px 1px;
+    filter: drop-shadow(var(--highlight-color) 0px 0px 1px);
+    fill: var(--highlight-color);
+    transition: .4s;
+}
+.main__projects__content__rectangle__description{ /*Descrição do projeto*/
+    font-size: 1rem;
+}
+
+/*Seção de contato*/
 .main__contact{
     display: flex;
     flex-direction: column;
     padding: 5em 7.5em;
     gap: 3em; 
+    height: 20em;
 }
-.main__contact__content{
+.main__contact__content{ /*Bloco da seção de contato*/
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: 1.5em;
 }
-.main__contact__content__link{
+.main__contact__content__link{ /*Link da seção de contato*/
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -317,7 +348,7 @@ strong{ /*Destaque para negrito*/
     background-color: var(--background-color);
     background-image: linear-gradient(to top, var(--third-color), var(--background-color));
     background-repeat: no-repeat;
-    position: absolute;
+    position: relative;
 }
 .footer__content{ /*Conteúdo do rodapé do site*/
     display: flex;
