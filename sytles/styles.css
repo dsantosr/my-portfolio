@@ -1,40 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{ /*Variaveis globais*/
-    --main-color: #1A1B1C;
-    --second-color: #fec76a;
+    --background-color: #1A1B1C;
+    --highlight-color: #fec76a;
     --third-color: #3D3E42;
     --fourth-color: #262728;
     --font-color: #e2e2e2;
+
     --shadow-color: rgba(26, 27, 28, 1);
     --main-font: "Montserrat", sans-serif;
-    --paragraph-font-size: 1.25rem;
+    --paragraph-font-size: 1.5rem;
     --title-font-size: 3rem;
 }
 
-html{
+html{ /*Suaviza o movimento ativado pelas ancoras de navegação*/
     scroll-behavior: smooth;
-}
-
-strong{ /*Destaque para negrito*/
-    color: var(--second-color);
 }
 
 body{ /*Corpo do site*/
     box-sizing: border-box;
-    background-color: var(--main-color);
+    background-color: var(--background-color);
 }
 
-p {
+h1{ /*Título*/
+    color: var(--highlight-color);
+    font-family: var(--main-font);
+    font-size: var(--title-font-size);
+    font-weight: 700;
+}
+
+h2{ /*Subtítulo*/
     color: var(--font-color);
     font-family: var(--main-font);
-    font-weight: 600;
-
-    text-align: left;
-    font-size: var(--font-size);
+    font-size: var(--title-font-size);
+    font-weight: 700;
+    text-align: center;
 }
 
-.header { /*Cabeçalho*/
+p { /*Parágrafo*/
+    color: var(--font-color);
+    font-family: var(--main-font);
+    font-weight: 700;
+
+    text-align: left;
+    font-size: var(--paragraph-font-size);
+}
+
+strong{ /*Destaque para negrito*/
+    text-shadow: var(--highlight-color) 0px 0px 2px;
+    color: var(--highlight-color);
+}
+
+/*Cabeçalho*/
+.header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -45,13 +63,11 @@ p {
     z-index: 1000;
     top: 0;
 }
-
 .header__logo{ /*Logo do cabeçalho*/
     width: 2em;
     height: 2em;
     padding: 1.25em 0;
 }
-
 .header__menu{ /*Menu do cabeçalho*/
     display: flex;
     flex-direction: row;
@@ -59,41 +75,42 @@ p {
     align-items: center;
     gap: 6.25em;
 }
-
-.header__menu__link{ /*Links de navegação do cabeçalho*/
-    text-decoration: none;
+.header__menu__link__text:hover{ /*HOVER: Cor para links de navegação do cabeçalho*/
+    color: var(--highlight-color);
+    text-shadow: var(--highlight-color) 0px 0px 1px;
+    color: var(--highlight-color);
+    transition: .4s;
 }
 
-.main__section__title{ /*Título*/
-    color: var(--second-color);
-    font-family: var(--main-font);
-    text-shadow: var(--second-color) 0px 0px 2px;
-    font-size: var(--title-font-size);
-    font-weight: 700;
-}
-
-.main__section__subtitle{ /*Subtítulo*/
-    text-align: center;
-    color: var(--font-color);
-    font-family: var(--main-font);
-    font-size: var(--title-font-size);
-    font-weight: 700;
-}
-
-.main__presentation{ /*Seção de introdução*/
+/*Seção de introdução*/
+.main__presentation{ 
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap-reverse;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 1em 10em;
-    height: 100vh;
+    gap: 35%;
 
     background-image: url(/assets/background-image.png); 
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 0em 16em;
+    height: 100vh;
 }
-
+.main__presentation__contact{ /*Atalhos para contato*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:1em;
+    padding-left: 1.5em;
+    border-left: 8px solid var(--highlight-color);
+    height: fit-content;
+    margin-top: 30%;
+}
+.contact__icon:hover{ /*HOVER: Brilho para icones de contato*/
+    filter: drop-shadow(var(--highlight-color) 0px 0px 3px);
+    fill: var(--highlight-color);
+    transition: .4s;
+}
 .main__presentation__description{ /*Informações da seção de introdução*/
     display: flex;
     flex-direction: column;
@@ -101,16 +118,14 @@ p {
     height: 15em;
     width: 34em;
 }
-
 .main__presentation__description__name{ /*Nome*/
     color: var(--font-color);
     font-family: var(--main-font);
     font-size: var(--title-font-size);
     font-weight: 700;
 }
-
 .main__presentation__description__contact{ /*Botão de convidativo para contato*/
-    color: var(--second-color);
+    color: var(--highlight-color);
     font-family: var(--main-font);
     text-decoration: none;
     text-align: center;
@@ -119,47 +134,43 @@ p {
 
     width: fit-content;
     padding: 0.8em 1.5em;
-    border: 5px solid var(--second-color);
+    border: 5px solid var(--highlight-color);
     border-radius: 12px;
 }
-
-.main__presentation__contact{ /*Atalhos para contato*/
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 10em;
-    padding-left: 1em;
-    margin-top: 10%;
-    border-left: 8px solid var(--second-color);
+.main__presentation__description__contact:hover{ /*HOVER: Cor e brilho para botão de contato*/
+    color: var(--font-color);
+    border: 5px solid var(--font-color);
+    text-shadow: var(--highlight-color) 0px 0px 2px;
+    box-shadow: var(--highlight-color) 0px 0px 4px;
+    transition: .4s;
 }
 
-.main__about{ /*Seção sobre*/
+/*Seção sobre*/
+.main__about{ 
     display: flex;
     flex-direction: column;
     padding: 6em 7.5em;
     gap: 1em;
 }
-
 .main__about__content{ /*Conteudos da seção sobre*/
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 1.25em;
 }
-
 .main__about__content__rectangle{ /*Retangulo da seção sobre*/
     width: 15em;
     height: 1em;
-    border-bottom: 6px solid var(--second-color);
+    border-bottom: 6px solid var(--highlight-color);
 }
-
-.main__about__content__text{
+.main__about__content__text{ /*Paragrafos da seção sobre*/
     display: flex;
     flex-direction: column;
     gap: 1em;
 }
 
-.main__skills__content{ /*Seção de habilidades*/
+/*Seção de habilidades*/
+.main__skills__content{ 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -169,12 +180,11 @@ p {
         400px 0px 100px 0px inset var(--shadow-color),
         -400px 0px 100px 0px inset var(--shadow-color),
         0px 1px 0px 0px var(--shadow-color),
-        0px -1px 0px 0px var(--shadow-color);
+        0px -1px 0px 0px var(--shadow-color); /*Fade*/
     z-index: 5;
     overflow: visible;
 }
-
-.main__skills__content__rectangles{
+.main__skills__content__rectangles{ /*Bloco de retangulos*/
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -182,10 +192,9 @@ p {
 
     gap: 1em;
     position: relative;
-    z-index: -5;
+    z-index: -5; /*Posicionado atrás do box-shadow do pai*/
 }
-
-.main__skills__content__rectangle{
+.main__skills__content__rectangle{ /*Retangulo*/
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -196,20 +205,17 @@ p {
     height: 12em;
     width: 16em;
 }
-
-.main__skills__content__icons{
+.main__skills__content__icons{ /*Bloco de icones da seção de habilidades*/
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-
     gap: 1em;
     position: absolute;
     margin: 0em 7.5em;
     width: fit-content;
 }
-
-.main__skills__content__icon{
+.main__skills__content__icon{ /*Icone*/
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -218,20 +224,15 @@ p {
     width: 16em;
 }
 
-.skills__icon{
-    display: flex;
-    justify-content: center;
-}
-
-.main__certificates{
+/*Seção de certificados*/
+.main__certificates{ 
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2em;
     padding: 5em 7.5em;
 }
-
-.main__certificates__content{
+.main__certificates__content{ /*Bloco da seção de certificados*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -239,8 +240,7 @@ p {
     justify-content: center;
     gap: 1em;
 }
-
-.main__certificates__content__rectangle{
+.main__certificates__content__rectangle{ /*Retangulo*/
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -248,19 +248,31 @@ p {
     padding: 0em 2em;
     gap: 1.5em;
 
-    width: 30em;
-    height: 5em;
+    width: 20em;
+    height: 4em;
     background-color: var(--fourth-color);
     border-radius: 1.5em;
+
+    color: var(--font-color);
+    font-family: var(--main-font);
+    font-weight: 700;
+
+    text-align: left;
+    font-size: var(--paragraph-font-size);
+}
+.main__certificates__content__rectangle:hover{ /*HOVER: Retangulo*/
+    color:var(--highlight-color);
+    background-color: var(--third-color);
+    transition: .4s;
 }
 
+/*Seção de projetos*/
 .main__projects{
     display: flex;
     flex-direction: column;
     padding: 5em 7.5em;
     gap: 1em; 
 }
-
 .main__projects__content{
     display: flex;
     flex-direction: row;
@@ -268,28 +280,24 @@ p {
     justify-content: center;
     gap: 1em;
 }
-
 .main__projects__content__rectangle{
     width: 22em;
     height: 15em;
     border-radius: 1.5em;
     background-color: var(--fourth-color);
 }
-
 .main__contact{
     display: flex;
     flex-direction: column;
     padding: 5em 7.5em;
     gap: 3em; 
 }
-
 .main__contact__content{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: 1.5em;
 }
-
 .main__contact__content__link{
     display: flex;
     flex-direction: row;
@@ -298,28 +306,27 @@ p {
     gap: 1.5em;
 }
 
-.footer{
+/*Rodapé do site*/
+.footer{ 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
     height: 20em;
 
-    background-color: var(--main-color);
-    background-image: linear-gradient(to top, var(--third-color), var(--main-color));
+    background-color: var(--background-color);
+    background-image: linear-gradient(to top, var(--third-color), var(--background-color));
     background-repeat: no-repeat;
     position: absolute;
 }
-
-.footer__content{
+.footer__content{ /*Conteúdo do rodapé do site*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-bottom: 4em;
     gap: 1em;
 }
-
-.footer__content__link{
+.footer__content__link{ /*Link do rodapé (FIGMA)*/
     color: var(--font-color);
     font-family: var(--main-font);
     font-weight: 600;

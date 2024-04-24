@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@dsantosr</title>
+    <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
     <link rel="stylesheet" type="text/css" href="./sytles/reset.css">
     <link rel="stylesheet" type="text/css" href="./sytles/styles.css">
+    <script defer src="main.js"></script>
 </head>
+
 <body>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
     <header class="header">
         <a href="#top-of-page">
             <img 
@@ -17,23 +28,27 @@
         </a>
         <nav class="header__menu">
             <a class="header__menu__link" href="#about">
-                <p>Sobre</p> </a>
+                <p class="header__menu__link__text" >Sobre</p> </a>
             <a class="header__menu__link" href="#projects">
-                <p>Portfólio</p> </a>
+                <p class="header__menu__link__text" >Portfólio</p> </a>
             <a class="header__menu__link" href="#contact">
-                <p>Contato</p> </a>
+                <p class="header__menu__link__text" >Contato</p> </a>
+            <input type="checkbox" class="header__menu__themebutton">
         </nav>
     </header> 
 
     <main class="main" id="top-of-page">
+        
         <section class="main__presentation">
             <div class="main__presentation__contact">
 
-                <a href="https://linkedin.com/in/dsantosr"> 
+                <a href="https://linkedin.com/in/dsantosr"
+                target="_blank"> 
                     <img src="/assets/linkedin-icon.svg" class="contact__icon" alt="icone do linkedin">
                 </a>
 
-                <a href="https://github.com/dsantosr">
+                <a href="https://github.com/dsantosr"
+                target="_blank"> 
                     <img src="/assets/github-icon.svg" class="contact__icon" alt="icone do github">
                 </a>
                 
@@ -47,9 +62,9 @@
         </section>
 
         <section class="main__about" id="about">
-            <h2 class="main__section__title">Sobre</h2>
+            <h1><strong>Sobre</strong></h1>
             <div class="main__about__content">
-                <div class="main__about__content__rectangle"></div>
+                <span class="main__about__content__rectangle"></span>
                 <div class="main__about__content__text">
                     <p>Olá! Sou Daniel, um bolsista no Programa Jovem  Tech, promovido pelo Grupo Mateus e Governo do Maranhão, e um estudante  de Ciência da Computação na Universidade Federal do Maranhão. Estou em  formação para seguir a carreira de desenvolvedor backend.</p>
                     <p>
@@ -57,13 +72,12 @@
                     <p>
                     Sou um entusiasta da tecnologia, sempre  buscando me atualizar sobre as tendências e novidades do mercado. Assim  sendo, estou sempre disposto a adquirir novas habilidades e  conhecimentos que possam me ajudar a crescer profissionalmente e  pessoalmente.</p>
                 </div>
-                
             </div>
         </section>
-        
+
         <section class="main__skills">
-            <h3 class="main__section__subtitle">Habilidades</h3>
-            <section class="main__skills__content">
+            <h2> Habilidades </h2>
+            <div class="main__skills__content">
                 <div class="main__skills__content__rectangles">
                     <div class="main__skills__content__rectangle">
                     </div>
@@ -141,59 +155,71 @@
                         </a>
 
                 </div>
-            </section>
+            </div>
         </section>
 
         <section class="main__certificates">
-            <h3 class="main__section__subtitle">Certificados</h3>
+            <h2>Certificados</h2>
             <div class="main__certificates__content">
-                <a class="main__certificates__content__rectangle">
+                <a class="main__certificates__content__rectangle"
+                    href="https://cursos.alura.com.br/degree/certificate/713e3443-1efb-4742-987b-0816b609b252?lang"
+                    target="_blank"> 
                     <img 
                         src="/assets/alura.svg" 
                         class="skills__icon" 
-                        alt="logo da alura">
-                    <p> HTML e CSS para projetos web </p>    
+                        alt="Logo da alura">
+                    HTML e CSS para projetos web    
                 </a>
-                <a class="main__certificates__content__rectangle">
+                <a  class="main__certificates__content__rectangle"
+                    href="https://cursos.alura.com.br/degree/certificate/4942dc46-1154-48f9-9fae-7ac17491d2d9"
+                    target="_blank"> 
                     <img 
                         src="/assets/alura.svg" 
-                        class="skills__icon" 
-                        alt="logo da alura">
-                    <p> Linux </p>    
+                        class="certificates__icon" 
+                        alt="Logo da alura">
+                    Linux    
                 </a>
-                <a class="main__certificates__content__rectangle">
+                <a  class="main__certificates__content__rectangle"
+                    href="https://cursos.alura.com.br/degree/certificate/5768b602-75f0-4338-b15d-17c401002ad2"
+                    target="_blank"> 
                     <img 
                         src="/assets/alura.svg" 
-                        class="skills__icon" 
-                        alt="logo da alura">
-                    <p> Cloud Computing </p>    
+                        class="certificates__icon" 
+                        alt="Logo da alura">
+                    Cloud Computing    
                 </a>
-                <a class="main__certificates__content__rectangle">
+                <a class="main__certificates__content__rectangle"
+                    href="https://cursos.alura.com.br/degree/certificate/a832c847-20b4-4820-b1c6-9e1ad13616a8"
+                    target="_blank"> 
                     <img 
                         src="/assets/alura.svg" 
-                        class="skills__icon" 
-                        alt="logo da alura">
-                    <p> Java e POO </p>    
+                        class="certificates__icon" 
+                        alt="Logo da alura">
+                    Java e POO    
                 </a>
-                <a class="main__certificates__content__rectangle">
+                <a class="main__certificates__content__rectangle"
+                    href="https://cursos.alura.com.br/certificate/05d43422-c2a5-4cd6-a747-408cadd9958c"
+                    target="_blank">
                     <img 
                         src="/assets/alura.svg" 
-                        class="skills__icon" 
-                        alt="logo da alura">
-                    <p> Git e GitHub </p>    
+                        class="certificates__icon" 
+                        alt="Logo da alura">
+                    Git e GitHub    
                 </a>
-                <a class="main__certificates__content__rectangle">
+                <a class="main__certificates__content__rectangle"
+                    href="https://www.linkedin.com/in/dsantosr/details/certifications/1705603556831/single-media-viewer/?profileId=ACoAADdMg8kBrgftgE9nbEpt6wYkxUFnGxlq4Mk"
+                    target="_blank">
                     <img 
                         src="/assets/gracom.svg" 
-                        class="skills__icon" 
-                        alt="logo da alura">
-                    <p> Computação Gráfica </p>    
+                        class="certificates__icon" 
+                        alt="Logo da alura">
+                    Computação Gráfica    
                 </a>   
             </div>
         </section>
 
         <section class="main__projects" id="projects">
-            <h3 class="main__section__title"> Portfólio </h3>
+            <h1> <strong>Portfólio</strong> </h1>
             <div class="main__projects__content">
                 <a class="main__projects__content__rectangle">
                 </a>
@@ -209,7 +235,7 @@
         </section>
 
         <section class="main__contact" id="contact">
-            <h3 class="main__section__title"> Contato </h3>
+            <h1> <strong>Contato</strong> </h1>
             <div class="main__contact__content">
                 <a class="main__contact__content__link"
                     href=https://www.linkedin.com/in/dsantosr/>
@@ -232,12 +258,14 @@
     </main>
 
     <footer class="footer">
+        
         <div class="footer__content">
             <p>Desenvolvido por Daniel dos Santos.</p>
             <a  class="footer__content__link"
                 href="https://www.figma.com/community/file/1363979944489292651/portifolio-de-daniel-dos-santos">Projeto do figma</a>
         </div>
     </footer>
-
+    
 </body>
+
 </html>
