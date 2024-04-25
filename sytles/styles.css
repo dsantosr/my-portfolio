@@ -64,6 +64,7 @@ strong{ /*Destaque para negrito*/
     position: fixed;
     z-index: 1000;
     top: 0;
+    height: 8vh;
 }
 .header__logo{ /*Logo do cabeçalho*/
     width: 2em;
@@ -92,10 +93,11 @@ strong{ /*Destaque para negrito*/
     align-items: center;
     gap: 35%;
 
-    background-image: url(/assets/background-image.png); 
+    background-image: url(/assets/background-image.png);
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 0em 16em;
+    padding: 0em 20vh;
     height: 100vh;
 }
 .main__presentation__contact{ /*Atalhos para contato*/
@@ -151,7 +153,7 @@ strong{ /*Destaque para negrito*/
 .main__about{ 
     display: flex;
     flex-direction: column;
-    padding: 6em 7.5em;
+    padding: 10vh;
     gap: 1em;
 }
 .main__about__content{ /*Conteudos da seção sobre*/
@@ -232,12 +234,13 @@ strong{ /*Destaque para negrito*/
     flex-direction: column;
     align-items: center;
     gap: 2em;
-    padding: 5em 7.5em;
+    padding: 5vh 10vh;
 }
 .main__certificates__content{ /*Bloco da seção de certificados*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-content: space-around;
     align-items: center;
     justify-content: center;
     gap: 1em;
@@ -246,14 +249,16 @@ strong{ /*Destaque para negrito*/
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: space-around;
     align-items: center;
-    padding: 0em 2em;
-    gap: 1.5em;
+    padding: 0em 1em;
+    gap: 1em;
 
-    width: 18em;
+    width: 40%;
     height: 4em;
     background-color: var(--fourth-color);
-    border-radius: 1.5em;
+    border-radius: 1em;
 
     color: var(--font-color);
     font-family: var(--main-font);
@@ -265,61 +270,62 @@ strong{ /*Destaque para negrito*/
 .main__certificates__content__rectangle:hover{ /*HOVER: Retangulo*/
     color:var(--highlight-color);
     background-color: var(--third-color);
-    transition: all ease .3s;
+    transition: all ease-in-out .3s;
 }
 
 /*Seção de projetos*/
 .main__projects{
     display: flex;
     flex-direction: column;
-    padding: 5em 7.5em;
+    padding: 10vh;
     gap: 3em;
-    height: 100vh;
 }
 .main__projects__content{ /*Bloco da seção de projetos*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-content: space-around;
+    align-items: center;
     justify-content: center;
     gap: 2em;
 }
-.main__projects__content__rectangle{ /*Bloco da seção de projetos*/
+.main__projects__content__rectangle{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    gap: em;
-
-    width: 19em;
-    height: 15em;
+    
+    gap: 1.25em;
     border-radius: 1.5em;
-    box-shadow: 0px 0px 4px 0px var(--highlight-color); 
-    background-color: var(--background-color);
-    padding: 1.5em 1.5em;
+    background-color: var(--fourth-color);
+
+    width: 43.5%;
+    height: 35em;
 }
-.main__projects__content__rectangle__link__title{
-    font-size: 1em;
+.main__projects__content__rectangle:hover{
+    filter: drop-shadow(var(--highlight-color) 0px 0px 1px);
+    background-color: var(--third-color);
+    transition: ease-in-out .2s;
 }
-.main__projects__content__rectangle__link{ /*Retangulo com informações do projeto*/
+.main__projects__content__rectangle__img{
+    border-top-left-radius: 1.5em;
+    border-top-right-radius: 1.5em;
+}
+.main__projects__content__rectangle__header{
     display: flex;
     flex-direction: row;
-    gap: 1.25em;
+    padding: 0em 2em;
+    gap: 1em;
 }
-.main__projects__content__rectangle__link:hover > *{ /*HOVER: Brilho para icone e titulo do projeto*/
-    text-shadow: var(--highlight-color) 0px 0px 1px;
-    filter: drop-shadow(var(--highlight-color) 0px 0px 1px);
-    fill: var(--highlight-color);
-    transition: .4s;
-}
-.main__projects__content__rectangle__description{ /*Descrição do projeto*/
+.main__projects__content__rectangle__description{
     font-size: 1rem;
+    padding: 0em 1.5em 1.5em 1.5em;
 }
+
 
 /*Seção de contato*/
 .main__contact{
     display: flex;
     flex-direction: column;
-    padding: 5em 7.5em;
+    padding: 10vh;
     gap: 3em; 
     height: 20em;
 }
