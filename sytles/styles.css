@@ -153,6 +153,7 @@ strong{ /*Destaque para negrito*/
 .main__about{ 
     display: flex;
     flex-direction: column;
+    height: 60vh;
     padding: 10vh;
     gap: 1em;
 }
@@ -284,21 +285,20 @@ strong{ /*Destaque para negrito*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: space-around;
+    align-content: flex-start;
     align-items: center;
     justify-content: center;
-    gap: 2em;
+    gap: 1.5em;
 }
 .main__projects__content__rectangle{
     display: flex;
     flex-direction: column;
-    
     gap: 1.25em;
     border-radius: 1.5em;
     background-color: var(--fourth-color);
 
-    width: 43.5%;
-    height: 35em;
+    width: 43%;
+    height: auto;
 }
 .main__projects__content__rectangle:hover{
     filter: drop-shadow(var(--highlight-color) 0px 0px 1px);
@@ -315,6 +315,9 @@ strong{ /*Destaque para negrito*/
     padding: 0em 2em;
     gap: 1em;
 }
+.main__projects__content__rectangle__header__text{
+    font-size: 1.25rem;
+}
 .main__projects__content__rectangle__description{
     font-size: 1rem;
     padding: 0em 1.5em 1.5em 1.5em;
@@ -327,7 +330,7 @@ strong{ /*Destaque para negrito*/
     flex-direction: column;
     padding: 10vh;
     gap: 3em; 
-    height: 20em;
+    height: 30vh;
 }
 .main__contact__content{ /*Bloco da seção de contato*/
     display: flex;
@@ -349,7 +352,7 @@ strong{ /*Destaque para negrito*/
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    height: 20em;
+    height: 45vh;
 
     background-color: var(--background-color);
     background-image: linear-gradient(to top, var(--third-color), var(--background-color));
