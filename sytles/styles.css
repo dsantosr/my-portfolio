@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "theme-toggle.css";
 
 :root{ /*Variaveis globais*/
-    --background-color: #1A1B1C;
-    --highlight-color: #fec76a;
-    --third-color: #3D3E42;
-    --fourth-color: #262728;
+    --background-color: rgb(26, 27, 28);
+    --highlight-color: rgb(254, 199, 106);
+    --third-color: rgb(61, 62, 66);
+    --fourth-color: rgb(38, 39, 40);
 
-    --font-color: #e2e2e2;
+    --font-color: rgb(226, 226, 226);
     --main-font: "Montserrat", sans-serif;
     --paragraph-font-size: 1.5rem;
     --title-font-size: 3rem;
 
     --shadow-color: rgba(26, 27, 28, 1);
+    transition: background-color 0.5s ease; /* Adiciona uma transição suave */
 }
 
 html{ /*Suaviza o movimento ativado pelas ancoras de navegação*/
@@ -59,12 +61,15 @@ strong{ /*Destaque para negrito*/
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--fourth-color);
-    padding: 0em 5em;
+    padding: 0 5em;
     position: fixed;
     z-index: 1000;
     top: 0;
     height: 8vh;
+
+    background-color: rgba(16, 16, 16, 0.5); /* Aplica transparencia */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 .header__logo{ /*Logo do cabeçalho*/
     width: 2em;
@@ -83,6 +88,14 @@ strong{ /*Destaque para negrito*/
     text-shadow: var(--highlight-color) 0px 0px 1px;
     color: var(--highlight-color);
     transition: .4s;
+}
+.header__progressBar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--highlight-color);
 }
 
 /*Seção de introdução*/
@@ -257,7 +270,7 @@ strong{ /*Destaque para negrito*/
     gap: 1em;
 
     width: 40%;
-    height: 4em;
+    height: 3.5em;
     background-color: var(--fourth-color);
     border-radius: 1em;
 
@@ -298,7 +311,7 @@ strong{ /*Destaque para negrito*/
     background-color: var(--fourth-color);
 
     width: 43%;
-    height: auto;
+    height: fit-content;
 }
 .main__projects__content__rectangle:hover{
     filter: drop-shadow(var(--highlight-color) 0px 0px 1px);
@@ -330,7 +343,7 @@ strong{ /*Destaque para negrito*/
     flex-direction: column;
     padding: 10vh;
     gap: 3em; 
-    height: 30vh;
+    height: 20vh;
 }
 .main__contact__content{ /*Bloco da seção de contato*/
     display: flex;
@@ -348,11 +361,13 @@ strong{ /*Destaque para negrito*/
 
 /*Rodapé do site*/
 .footer{ 
+    z-index: -2;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    height: 45vh;
+    height: 35vh;
+    padding: 10vh;
 
     background-color: var(--background-color);
     background-image: linear-gradient(to top, var(--third-color), var(--background-color));
@@ -363,7 +378,7 @@ strong{ /*Destaque para negrito*/
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-bottom: 4em;
+    padding-bottom: 4em 4em 0em 4em;
     gap: 1em;
 }
 .footer__content__link{ /*Link do rodapé (FIGMA)*/
