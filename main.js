@@ -1,3 +1,8 @@
+let body = document.querySelectorAll('*');
+let root = document.querySelector(':root');
+//root.style.setProperty("nome da variável", "valor");
+//root.style.getPropertyValue("variavel"); 
+
 // Função para a estilização da barra de scroll do header
 document.addEventListener('scroll', function() {
   //Calcula a distância máxima de rolagem
@@ -7,7 +12,7 @@ document.addEventListener('scroll', function() {
   //Calcula a porcentagem de rolagem
   const scrollPercent = (currentScroll / maxScroll) * 100;
   //Define a largura da barra de progresso
-  document.querySelector('.header__progressBar').style.width = `${scrollPercent}%`;
+  document.querySelector('.header__bottomBar__progressBar').style.width = `${scrollPercent}%`;
 });
 
 // Função para o plugin VLibras
@@ -22,13 +27,20 @@ document.addEventListener('DOMContentLoaded', function(){
 
 // Função para o a mudança de tema
 document.addEventListener('DOMContentLoaded', function() {
-  const themeButton = document.querySelector('.header__menu__themeButton');
-
-  themeButton.addEventListener('change', function() {
-      if (this.checked) {
-          document.documentElement.style.setProperty('--background-color', 'rgb(226, 226, 226)');
-      } else {
-          document.documentElement.style.setProperty('--background-color', 'rgb(26, 27, 28)');
-      }
+  theme.addEventListener('click', function() {
+      body.forEach(element => {
+          element.classList.toggle('light');
+      });
   });
 });
+
+let color = root.style.getPropertyValue("--shadow-color"); 
+
+let icon = document.querySelector('#mouse1__icon');
+let html = document.querySelector('html');
+html.addEventListener('mousedown', () => {
+    icon.style.setProperty("fill", "#000000")
+    html.addEventListener('mouseup', () =>{
+        icon.style.setProperty("fill", "#555555")
+    })
+})

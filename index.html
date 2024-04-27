@@ -20,11 +20,14 @@
     </div>
 
     <header class="header">
-        <a href="#top-of-page">
-            <img 
-                src="assets/icon.svg" 
-                class="header__logo" 
-                alt="logo com caractere D">
+        <a href="#">
+
+            <svg class="header__logo icon" width="56" height="54" viewBox="0 0 56 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="mouse1__icon" fill-rule="evenodd" clip-rule="evenodd" d="M31.9259 0H0L2.91356 15.5564C3.60962 19.2728 3.95765 21.131 4.91146 22.5227C5.75243 23.7497 6.91886 24.718 8.27973 25.3187C9.82319 26 11.7137 26 15.4948 26H24.1326C24.9728 22.6022 29.7032 20 35.4128 20C41.1224 20 45.8527 22.6022 46.6929 26H54.0741C55.1377 26 56 25.1377 56 24.0741C56 10.7783 45.2217 0 31.9259 0Z" fill="#D9D9D9"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M24.0947 28H15.4948C11.7137 28 9.82319 28 8.27973 28.6813C6.91886 29.282 5.75243 30.2503 4.91146 31.4773C3.95765 32.869 3.60962 34.7272 2.91356 38.4436L0 54H31.9259C45.2217 54 56 43.2217 56 29.9259C56 28.8623 55.1377 28 54.0741 28H46.7308C46.0065 31.479 41.2154 34.1667 35.4128 34.1667C29.6102 34.1667 24.819 31.479 24.0947 28Z" fill="#D9D9D9"/>
+                <rect x="27" y="23.5" width="17" height="7" rx="3" fill="#D9D9D9"/>
+            </svg>
+
         </a>
         <nav class="header__menu">
             <a class="header__menu__link" href="#about">
@@ -34,27 +37,30 @@
             <a class="header__menu__link" href="#contact">
                 <p class="header__menu__link__text" >Contato</p> </a>
             
-            <input type="checkbox" class="header__menu__themeButton">
+            <input type="checkbox" class="header__menu__themeButton" id="theme">
         </nav>
-        <div class="header__progressBar"></div>
+        <div class="header__bottomBar">
+            <div class="header__bottomBar__backgroundBar"></div>
+            <div class="header__bottomBar__progressBar"></div>
+        </div>
     </header> 
 
-    <main class="main" id="top-of-page">
+    <main class="main">
         
         <section class="main__presentation">
             <div class="main__presentation__contact">
 
                 <a href="https://linkedin.com/in/dsantosr"
                 target="_blank"> 
-                    <img src="/assets/linkedin-icon.svg" 
-                    class="contact__icon" 
+                    <img src="/assets/linkedin-icon.svg"
+                    class="main__presentation__contact__icon icon" 
                     alt="icone do linkedin">
                 </a>
 
                 <a href="https://github.com/dsantosr"
                 target="_blank"> 
-                    <img src="/assets/github-icon.svg" 
-                    class="contact__icon" 
+                    <img src="/assets/github-white.svg"
+                    class="main__presentation__contact__icon icon" 
                     alt="icone do github">
                 </a>
                 
@@ -85,66 +91,78 @@
             <h2> Habilidades </h2>
             <div class="main__skills__content">
                 <div class="main__skills__content__rectangles">
-                    <div class="main__skills__content__rectangle">
-                        <a class="main__skills__content__icon"> 
-                            <img src="/assets/c.svg" class="skills__icon" alt="icone do C">
-                        </a>
-                    </div>
-                    <div class="main__skills__content__rectangle">
-                        <a class="main__skills__content__icon"> 
-                            <img src="/assets/java.svg" class="skills__icon" alt="icone do java">
-                        </a>
-                    </div>
-                    <div class="main__skills__content__rectangle">
-                        <a class="main__skills__content__icon"> 
-                            <img src="/assets/linux.svg" class="skills__icon" alt="icone do linux">
-                        </a>
-                    </div>
-                    <div class="main__skills__content__rectangle">
-                        <a class="main__skills__content__icon"> 
-                            <img src="/assets/python.svg" class="skills__icon" alt="icone do python">
-                        </a>
-                    </div>
-                    <div class="main__skills__content__rectangle">
-                        <a class="main__skills__content__icon"> 
-                            <img src="/assets/git.svg" class="skills__icon" alt="icone do git">
-                        </a>
-                    </div>
-                    <div class="main__skills__content__rectangle">
-                        <a class="main__skills__content__icon"> 
-                            <img src="/assets/github.svg" class="skills__icon" alt="icone do github">
-                        </a>
-                    </div>
-                    <div class="main__skills__content__rectangle">
-                        <a class="main__skills__content__icon">
-                            <img src="/assets/illustrator.svg" class="skills__icon" alt="icone do illustrator">
-                        </a>
-                    </div>
-                    <div class="main__skills__content__rectangle">
-                        <a class="main__skills__content__icon"> 
-                            <img src="/assets/aws.svg" class="skills__icon" alt="icone do aws">
-                        </a>
-                    </div>
-                    <div class="main__skills__content__rectangle">
-                        <a class="main__skills__content__icon"> 
-                            <img src="/assets/html5.svg" class="skills__icon" alt="icone do html5">
-                        </a>
-                    </div>
-                    <div class="main__skills__content__rectangle">
-                        <a class="main__skills__content__icon"> 
-                            <img src="/assets/css3.svg" class="skills__icon" alt="icone do css3">
-                        </a>
-                    </div>
-                    <div class="main__skills__content__rectangle">
-                        <a class="main__skills__content__icon"> 
-                            <img src="/assets/js.svg" class="skills__icon" alt="icone do javascript">
-                        </a>
-                    </div>
-                    <div class="main__skills__content__rectangle">
-                        <a class="main__skills__content__icon"> 
-                            <img src="/assets/figma.svg" class="skills__icon" alt="icone do figma">
-                        </a>
-                    </div>
+
+                    <a class="main__skills__content__rectangle"> 
+                        <img src="/assets/c.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do C">
+                        <h3>C</h3>
+                    </a>
+
+
+                    <a class="main__skills__content__rectangle"> 
+                        <img src="/assets/java.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do java">
+                        <h3>Java</h3>
+                    </a>
+
+
+                    <a class="main__skills__content__rectangle"> 
+                        <img src="/assets/linux.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do linux">
+                        <h3>Ubuntu</h3>
+                    </a>
+
+
+                    <a class="main__skills__content__rectangle"> 
+                        <img src="/assets/python.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do python">
+                        <h3>Pyhton</h3>
+                    </a>
+
+
+                    <a class="main__skills__content__rectangle"> 
+                        <img src="/assets/git.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do git">
+                        <h3>Git</h3>
+                    </a>
+
+
+                    <a class="main__skills__content__rectangle"> 
+                        <img src="/assets/github.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do github">
+                        <h3>GitHub</h3>
+                    </a>
+
+
+                    <a class="main__skills__content__rectangle">
+                        <img src="/assets/illustrator.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do illustrator">
+                        <h3>Illustrator</h3>
+                    </a>
+
+
+                    <a class="main__skills__content__rectangle"> 
+                        <img src="/assets/aws.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do aws">
+                        <h3>AWS</h3>
+                    </a>
+
+
+                    <a class="main__skills__content__rectangle"> 
+                        <img src="/assets/html5.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do html5">
+                        <h3>HTML5</h3>
+                    </a>
+
+
+                    <a class="main__skills__content__rectangle"> 
+                        <img src="/assets/css3.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do css3">
+                        <h3>CSS3</h3>
+                    </a>
+
+
+                    <a class="main__skills__content__rectangle"> 
+                        <img src="/assets/javascript.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do javascript">
+                        <h3>JavaScript</h3>
+                    </a>
+
+
+                    <a class="main__skills__content__rectangle"> 
+                        <img src="/assets/figma.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do figma">
+                        <h3>Figma</h3>
+                    </a>
+
                 </div>
             </div>
         </section>
@@ -157,7 +175,7 @@
                     target="_blank"> 
                     <img 
                         src="/assets/alura.svg" 
-                        class="main__certificates__content__rectangle__icon" 
+                        class="main__certificates__content__rectangle__icon highlight_icon" 
                         alt="Logo da alura">
                     HTML e CSS    
                 </a>
@@ -166,7 +184,7 @@
                     target="_blank"> 
                     <img 
                         src="/assets/alura.svg" 
-                        class="main__certificates__content__rectangle__icon" 
+                        class="main__certificates__content__rectangle__icon highlight_icon" 
                         alt="Logo da alura">
                     Linux    
                 </a>
@@ -175,7 +193,7 @@
                     target="_blank"> 
                     <img 
                         src="/assets/alura.svg" 
-                        class="main__certificates__content__rectangle__icon" 
+                        class="main__certificates__content__rectangle__icon highlight_icon" 
                         alt="Logo da alura">
                     Cloud Computing    
                 </a>
@@ -184,7 +202,7 @@
                     target="_blank"> 
                     <img 
                         src="/assets/alura.svg" 
-                        class="main__certificates__content__rectangle__icon" 
+                        class="main__certificates__content__rectangle__icon highlight_icon" 
                         alt="Logo da alura">
                     Java e POO    
                 </a>
@@ -193,7 +211,7 @@
                     target="_blank">
                     <img 
                         src="/assets/alura.svg" 
-                        class="main__certificates__content__rectangle__icon" 
+                        class="main__certificates__content__rectangle__icon highlight_icon" 
                         alt="Logo da alura">
                     Git e GitHub    
                 </a>
@@ -202,8 +220,8 @@
                     target="_blank">
                     <img 
                         src="/assets/gracom.svg" 
-                        class="main__certificates__content__rectangle__icon" 
-                        alt="Logo da alura">
+                        class="main__certificates__content__rectangle__icon highlight_icon" 
+                        alt="Logo da gracom">
                     Computação Gráfica    
                 </a>   
             </div>
@@ -223,7 +241,7 @@
 
                     <div class="main__projects__content__rectangle__header">
                         <img src="/assets/url-icon.svg" 
-                        class="main__projects__content__rectangle__header__icon"
+                        class="main__projects__content__rectangle__header__icon highlight_icon"
                             alt="Icone de url">
                         <p class="main__projects__content__rectangle__header__text">Solucionando o Desafio de Einstein com IA</p>
                     </div>
@@ -244,7 +262,7 @@
 
                     <div class="main__projects__content__rectangle__header">
                         <img src="/assets/url-icon.svg" 
-                        class="main__projects__content__rectangle__header__icon"
+                        class="main__projects__content__rectangle__header__icon highlight_icon"
                             alt="Icone de url">
                         <p class="main__projects__content__rectangle__header__text">Solucionando o Desafio de Einstein com IA</p>
                     </div>
@@ -265,7 +283,7 @@
 
                     <div class="main__projects__content__rectangle__header">
                         <img src="/assets/url-icon.svg" 
-                        class="main__projects__content__rectangle__header__icon"
+                        class="main__projects__content__rectangle__header__icon highlight_icon"
                             alt="Icone de url">
                         <p class="main__projects__content__rectangle__header__text">Solucionando o Desafio de Einstein com IA</p>
                     </div>
@@ -286,7 +304,7 @@
 
                     <div class="main__projects__content__rectangle__header">
                         <img src="/assets/url-icon.svg" 
-                        class="main__projects__content__rectangle__header__icon"
+                        class="main__projects__content__rectangle__header__icon highlight_icon"
                             alt="Icone de url">
                         <p class="main__projects__content__rectangle__header__text">Solucionando o Desafio de Einstein com IA</p>
                     </div>
@@ -307,7 +325,8 @@
                     href=https://www.linkedin.com/in/dsantosr/>
                     <img 
                         src="/assets/linkedin-icon.svg" 
-                        class="contact__img" 
+                        id="icon"
+                        class="contact__img icon" 
                         alt="logo do linkedin">
                     <p>linkedin.com/in/dsantosr</p>
                 </a>
@@ -315,7 +334,8 @@
                     href=mailto:danielsantrodrigues42@gmail.com>
                     <img 
                         src="/assets/mail.svg" 
-                        class="contact__img" 
+                        id="icon"
+                        class="contact__img icon" 
                         alt="icone de e-mail">
                     <p>danielsantrodrigues42@gmail.com</p>
                 </a>
@@ -326,9 +346,15 @@
     <footer class="footer">
         
         <div class="footer__content">
-            <p>Desenvolvido por Daniel dos Santos.</p>
+            <h3 class="footer__content__title">Desenvolvido por Daniel dos Santos.</h3>
             <a  class="footer__content__link"
-                href="https://www.figma.com/community/file/1363979944489292651/portifolio-de-daniel-dos-santos">Projeto do figma</a>
+                href="https://www.figma.com/community/file/1363979944489292651/portifolio-de-daniel-dos-santos">
+                <img src="/assets/url-icon.svg" 
+                        class="footer__content__link__icon"
+                            alt="Icone de url">
+                Projeto do figma
+            </a>
+            
         </div>
     </footer>
     
