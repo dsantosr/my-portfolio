@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import "theme-toggle.css";
 
 :root{ /*Variaveis globais*/
     --background-color: rgb(26, 27, 28);
@@ -13,7 +12,6 @@
     --title-font-size: 3rem;
 
     --shadow-color: rgba(26, 27, 28, 1);
-    transition: background-color 0.5s ease; /* Adiciona uma transição suave */
 }
 
 html{ /*Suaviza o movimento ativado pelas ancoras de navegação*/
@@ -61,11 +59,11 @@ strong{ /*Destaque para negrito*/
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 5em;
+    padding: 0 5vw;
     position: fixed;
     z-index: 1000;
     top: 0;
-    height: 8vh;
+    height: 7vh;
 
     background-color: rgba(16, 16, 16, 0.5); /* Aplica transparencia */
     backdrop-filter: blur(10px);
@@ -104,13 +102,13 @@ strong{ /*Destaque para negrito*/
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding: 4vh 20vw;
     gap: 35%;
 
     background-image: url(/assets/background-image.png);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 0em 20vh;
     height: 100vh;
 }
 .main__presentation__contact{ /*Atalhos para contato*/
@@ -153,6 +151,9 @@ strong{ /*Destaque para negrito*/
     padding: 0.8em 1.5em;
     border: 5px solid var(--highlight-color);
     border-radius: 12px;
+    background-color: rgba(133, 133, 133, 0.015); /* Aplica transparencia */
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 }
 .main__presentation__description__contact:hover{ /*HOVER: Cor e brilho para botão de contato*/
     color: var(--font-color);
@@ -166,9 +167,9 @@ strong{ /*Destaque para negrito*/
 .main__about{ 
     display: flex;
     flex-direction: column;
-    height: 60vh;
-    padding: 10vh;
-    gap: 1em;
+    height: fit-content;
+    padding: 8vh 10vw;
+    gap: 2em;
 }
 .main__about__content{ /*Conteudos da seção sobre*/
     display: flex;
@@ -188,12 +189,18 @@ strong{ /*Destaque para negrito*/
 }
 
 /*Seção de habilidades*/
+.main__skills{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding: 8vh 10vw;
+    gap: 2em;
+}
 .main__skills__content{ 
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1em;
-    padding: 2em 7.5em;
     box-shadow:
         400px 0px 100px 0px inset var(--shadow-color),
         -400px 0px 100px 0px inset var(--shadow-color),
@@ -223,32 +230,14 @@ strong{ /*Destaque para negrito*/
     height: 12em;
     width: 16em;
 }
-.main__skills__content__icons{ /*Bloco de icones da seção de habilidades*/
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1em;
-    position: absolute;
-    margin: 0em 7.5em;
-    width: fit-content;
-}
-.main__skills__content__icon{ /*Icone*/
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 12em;
-    width: 16em;
-}
 
 /*Seção de certificados*/
 .main__certificates{ 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    height: fit-content;
+    padding: 8vh 10vw;
     gap: 2em;
-    padding: 5vh 10vh;
 }
 .main__certificates__content{ /*Bloco da seção de certificados*/
     display: flex;
@@ -269,7 +258,7 @@ strong{ /*Destaque para negrito*/
     padding: 0em 1em;
     gap: 1em;
 
-    width: 40%;
+    width: 43%;
     height: 3.5em;
     background-color: var(--fourth-color);
     border-radius: 1em;
@@ -286,32 +275,36 @@ strong{ /*Destaque para negrito*/
     background-color: var(--third-color);
     transition: all ease-in-out .3s;
 }
+.main__certificates__content__rectangle__icon{
+    height: fit-content;
+}
 
 /*Seção de projetos*/
 .main__projects{
     display: flex;
     flex-direction: column;
-    padding: 10vh;
-    gap: 3em;
+    height: fit-content;
+    padding: 8vh 10vw;
+    gap: 1em;
 }
-.main__projects__content{ /*Bloco da seção de projetos*/
+.main__projects__content {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-start;
-    align-items: center;
+    align-items: stretch; /* Alterado para stretch */
     justify-content: center;
     gap: 1.5em;
 }
-.main__projects__content__rectangle{
+
+.main__projects__content__rectangle {
     display: flex;
     flex-direction: column;
     gap: 1.25em;
     border-radius: 1.5em;
     background-color: var(--fourth-color);
-
-    width: 43%;
-    height: fit-content;
+    width: 20em;
+    flex: 1; /* Adicionado */
 }
 .main__projects__content__rectangle:hover{
     filter: drop-shadow(var(--highlight-color) 0px 0px 1px);
@@ -341,9 +334,9 @@ strong{ /*Destaque para negrito*/
 .main__contact{
     display: flex;
     flex-direction: column;
-    padding: 10vh;
-    gap: 3em; 
-    height: 20vh;
+    height: fit-content;
+    padding: 8vh 10vw;
+    gap: 1em;
 }
 .main__contact__content{ /*Bloco da seção de contato*/
     display: flex;
@@ -360,19 +353,17 @@ strong{ /*Destaque para negrito*/
 }
 
 /*Rodapé do site*/
-.footer{ 
-    z-index: -2;
+.footer{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    height: 35vh;
+    height: 38vh;
     padding: 10vh;
 
     background-color: var(--background-color);
     background-image: linear-gradient(to top, var(--third-color), var(--background-color));
     background-repeat: no-repeat;
-    position: relative;
 }
 .footer__content{ /*Conteúdo do rodapé do site*/
     display: flex;
@@ -391,33 +382,98 @@ strong{ /*Destaque para negrito*/
     text-align: center;
 }
 
-/* Media Query para Dispositivos Mobile */
+/* For Mobile devices */
 @media (max-width: 480px) {
     :root{
-        --paragraph-font-size: 1.5rem;
-        --title-font-size: 4rem;
+        --paragraph-font-size: 1rem;
+        --title-font-size: 2rem;
     }
 
-    p{
-        font-size: var(--paragraph-font-size);
+    .main__presentation{
+        padding: 0 10vw;
+
+    } 
+    .main__presentation{
+        flex-direction: column-reverse;
+        gap: 20vh;
+    }
+    .main__presentation__contact{
+        margin-top: 0;
+        margin-left: auto;
+    }
+    .main__presentation__description{
+        margin-top: 0;
+        margin-right: auto;
     }
 
-    .header{
-        padding: 0em 2em;
+    .header__menu__link{
+        display: none;
     }
 
-    .header__logo{
-        width: 2em;
-        height: 2em;
-        padding: .5em 0;
+    .main__certificates__content__rectangle{ /*Retangulo*/
+        width: 90%;
+    }
+}
+
+/* For Tablets or iPad*/
+@media (min-width: 480px) and (max-width: 768px) {
+    :root{
+        --paragraph-font-size: 1.25rem;
+        --title-font-size: 3rem;
     }
 
-    .header__menu{
+    .main__presentation{
+        padding: 0 10vw;
+
+    } 
+    .main__presentation{
+        flex-direction: column-reverse;
+        gap: 20vh;
+    }
+    .main__presentation__contact{
+        margin-top: 0;
+        margin-left: auto;
+    }
+    .main__presentation__description{
+        margin-top: 0;
+        margin-right: auto;
+    }
+
+    .main__certificates__content__rectangle{ /*Retangulo*/
+        width: 90%;
+    }
+
+    .header__menu__link{
         display: none;
     }
 }
- 
-/* Media Query para Tablets e Ipads */
-@media (min-width: 481px) and (max-width: 1025px) {
 
+/* For Laptop or small-size screen*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    :root{
+        --paragraph-font-size: 1.25rem;
+        --title-font-size: 3rem;
+    }
+
+    .main__presentation{
+        padding: 0 10vw;
+
+    } 
+    .main__presentation{
+        flex-direction: column-reverse;
+        gap: 20vh;
+    }
+    .main__presentation__contact{
+        margin-top: 0;
+        margin-left: auto;
+    }
+    .main__presentation__description{
+        margin-top: 0;
+        margin-right: auto;
+    }
+    
+
+    .main__certificates__content__rectangle{ /*Retangulo*/
+        width: 90%;
+    }
 }
