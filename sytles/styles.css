@@ -297,9 +297,10 @@ strong{ /*Destaque para negrito*/
     align-content: flex-start;
     justify-content: center;
     gap: 1.25em;
+    position: relative;
 }
 
-.main__skills__content__gradient{
+.main__skills__content__rectangles__gradient{
     position: absolute;
     top: 0;
     left: 0;
@@ -344,6 +345,7 @@ strong{ /*Destaque para negrito*/
 .main__certificates__content{ /*Bloco da seção de certificados*/
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
     align-content: flex-start;
     gap: 1.25em;
@@ -519,6 +521,13 @@ strong{ /*Destaque para negrito*/
 
     .main__certificates__content__rectangle{
         height: 4em;
+    }
+
+    .main__about__content{
+        flex-direction: column;
+    }
+    .main__about__content__rectangle{
+        width: 7em;
     }
 
     .footer__content__title{
