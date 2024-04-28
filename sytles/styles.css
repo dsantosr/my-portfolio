@@ -380,7 +380,7 @@ strong{ /*Destaque para negrito*/
     transition: .5s ease;
 }
 .main__certificates__content__rectangle__icon{
-    width: 2vw;
+    width: 1.5vw;
 }
 
 /*Seção de projetos*/
@@ -518,6 +518,10 @@ strong{ /*Destaque para negrito*/
         --title-font-size: 1.5rem;
     }
 
+    .main__presentation{
+        padding: 0em 10vw 5vh;
+    }
+
     .main__certificates__content__rectangle{
         height: 4em;
     }
@@ -553,18 +557,20 @@ strong{ /*Destaque para negrito*/
         display: block;
     }
 
-    .main__certificates__content__rectangle{
-        font-size: 1rem;
-    }
-
     .main__presentation__description{
         margin-right: 0;
         width: 100%;
         height: fit-content;
     }
+
     .main__skills__content__rectangle{
         width: 100%;
     }
+
+    .main__certificates__content__rectangle{
+        font-size: 1rem;
+    }
+    
     .main__certificates__content__rectangle__icon{
         width: 4vw;
     }
