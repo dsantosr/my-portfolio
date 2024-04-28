@@ -485,6 +485,7 @@ strong{ /*Destaque para negrito*/
 .footer__content__title{
     color: var(--background-color);
     transition: .5s ease;
+    font-weight: 900;
 }
 .footer__content__link{ /*Link do rodapé (FIGMA)*/
     display: flex;
@@ -518,6 +519,11 @@ strong{ /*Destaque para negrito*/
 
     .main__certificates__content__rectangle{
         height: 4em;
+    }
+
+    .footer__content__title{
+        text-align: center;
+        font-size: .9rem;
     }
 
 }
@@ -564,7 +570,7 @@ strong{ /*Destaque para negrito*/
         font-size: 1rem;
     }
     .contact__img{
-        width: 5vw;
+        width: 8vw;
     }
 }
 
