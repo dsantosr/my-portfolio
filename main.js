@@ -1,7 +1,5 @@
 let body = document.querySelectorAll('*');
 let root = document.querySelector(':root');
-//root.style.setProperty("nome da variável", "valor");
-//root.style.getPropertyValue("variavel"); 
 
 // Função para a estilização da barra de scroll do header
 document.addEventListener('scroll', function() {
