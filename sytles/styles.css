@@ -35,6 +35,9 @@ html{ /*Suaviza o movimento ativado pelas ancoras de navegação*/
 }
 
 body{ /*Corpo do site*/
+    display: flex;
+    flex-direction: column;
+    gap: 10em;
     background-color: var(--background-color);
     transition: all .5s ease;
 }
