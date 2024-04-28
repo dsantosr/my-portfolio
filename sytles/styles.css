@@ -176,6 +176,7 @@ strong{ /*Destaque para negrito*/
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    align-content: center;
     padding: 4vh 15vw;
     gap: 30vw;
 
@@ -200,12 +201,11 @@ strong{ /*Destaque para negrito*/
 .main__presentation__contact__icon{
     height: 6vh;
 }
-
 .main__presentation__description{ /*Informações da seção de introdução*/
     display: flex;
     flex-direction: column;
     gap: 2em;
-    height: 15em;
+    height: fit-content;
     width: 34em;
 }
 .main__presentation__description__name{ /*Nome*/
@@ -217,6 +217,11 @@ strong{ /*Destaque para negrito*/
     transition: .5s ease;
 }
 .main__presentation__description__contact{ /*Botão de convidativo para contato*/
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.8em 1.5em;
+
     color: var(--highlight-color);
     font-family: var(--paragraph-font);
     text-decoration: none;
@@ -224,8 +229,7 @@ strong{ /*Destaque para negrito*/
     font-size: var(--paragraph-font-size);
     font-weight: 600;
 
-    width: fit-content;
-    padding: 0.8em 1.5em;
+
     border: 5px solid var(--highlight-color);
     border-radius: 12px;
     background-color: rgba(var(--background-color), 0.9); /* Aplica transparencia */
@@ -311,7 +315,7 @@ strong{ /*Destaque para negrito*/
     align-items: center;
 
     gap: 1em;
-    padding: 1em 20vh;
+    padding: 1em 6%;
     height: fit-content;
     width: fit-content;
 
@@ -349,6 +353,7 @@ strong{ /*Destaque para negrito*/
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-start;
+    align-items: center;
     flex: 1;
 
     gap: 1.25em;
@@ -532,10 +537,17 @@ strong{ /*Destaque para negrito*/
         display: block;
     }
 
+    .main__certificates__content__rectangle{
+        font-size: 1rem;
+    }
+
     .main__presentation__description{
         margin-right: 0;
         width: 100%;
         height: fit-content;
+    }
+    .main__skills__content__rectangle{
+        width: 100%;
     }
 
     .main__projects__content__rectangle{
@@ -547,6 +559,9 @@ strong{ /*Destaque para negrito*/
     }
     .main__contact__content__link{
         gap:2vw;
+    }
+    .main__contact__content__link__text{
+        font-size: 1rem;
     }
     .contact__img{
         width: 5vw;
@@ -564,21 +579,24 @@ strong{ /*Destaque para negrito*/
         display: none;
     }
     .main__presentation{
-        flex-direction: column-reverse;
-        padding: 0 10vw;
-        gap: 20vh;
+        flex-wrap: wrap-reverse;
+        flex-direction: row;
+        padding: 4em 10vw 5vh;
+        gap: 5vh;
     }
     .main__presentation__contact{
         margin-top: 0;
         margin-left: auto;
         padding-left: 0em;
         border-left: 0;
-        padding-right: 1.5em;
-        border-right: 8px solid var(--highlight-color);
+        padding-right: 3vw;
+        border-right: 5px solid var(--highlight-color);
     }
     .main__presentation__description{
         margin-top: 0;
-        margin-right: auto;
+        width: fit-content;
+        gap: 2vh;
+        height: fit-content;
     }
     .main__certificates__content{
         flex-direction: column;
