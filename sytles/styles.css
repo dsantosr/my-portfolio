@@ -35,9 +35,7 @@ html{ /*Suaviza o movimento ativado pelas ancoras de navegação*/
 }
 
 body{ /*Corpo do site*/
-    box-sizing: border-box;
     background-color: var(--background-color);
-
     transition: all .5s ease;
 }
 
@@ -126,9 +124,9 @@ strong{ /*Destaque para negrito*/
     transition: .5s ease;
 }
 .header__logo{ /*Logo do cabeçalho*/
-    width: 2em;
-    height: 2em;
-    margin: 1em 0em;
+    width: 4vh;
+    height: 4vh;
+    margin: 2vh 0em;
 }
 .header__menu{ /*Menu do cabeçalho*/
     display: flex;
@@ -178,7 +176,7 @@ strong{ /*Destaque para negrito*/
     align-items: center;
     align-content: center;
     padding: 4vh 15vw;
-    gap: 30vw;
+    gap: 28vw;
 
     background-image: url(/assets/background-image.png);
     background-attachment: fixed;
@@ -220,7 +218,7 @@ strong{ /*Destaque para negrito*/
     display: flex;
     width: fit-content;
     height: fit-content;
-    padding: 0.8em 1.5em;
+    padding: 1.5vh 2vw;
 
     color: var(--highlight-color);
     font-family: var(--paragraph-font);
@@ -382,7 +380,7 @@ strong{ /*Destaque para negrito*/
     transition: .5s ease;
 }
 .main__certificates__content__rectangle__icon{
-    height: fit-content;
+    width: 2vw;
 }
 
 /*Seção de projetos*/
@@ -462,6 +460,7 @@ strong{ /*Destaque para negrito*/
     align-items: center;
     text-decoration: none;
     gap: 1.5em;
+    word-break: break-all;
 }
 
 /*Rodapé do site*/
@@ -543,7 +542,9 @@ strong{ /*Destaque para negrito*/
         --paragraph-font-size: 1.25rem;
         --title-font-size: 3rem;
     }
-
+    .header{
+        height: fit-content;
+    }
     .header__menu__link{
         display: none;
     }
@@ -563,6 +564,9 @@ strong{ /*Destaque para negrito*/
     }
     .main__skills__content__rectangle{
         width: 100%;
+    }
+    .main__certificates__content__rectangle__icon{
+        width: 4vw;
     }
 
     .main__projects__content__rectangle{
