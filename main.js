@@ -34,13 +34,22 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-let color = root.style.getPropertyValue("--shadow-color"); 
 
-let icon = document.querySelector('#mouse1__icon');
-let html = document.querySelector('html');
-html.addEventListener('mousedown', () => {
-    icon.style.setProperty("fill", "#000000")
+// Função para manipulação da logo para interação com mouse
+document.addEventListener('DOMContentLoaded', function() {
+  let icon = document.querySelector('#mouse__icon');
+  let elements = document.querySelectorAll('#mouse__icon *');
+  let html = document.querySelector('html');
+  html.addEventListener('mousedown', () => {
+    icon.style.setProperty("filter", "unset");
+    elements[0].style.setProperty("fill", "var(--highlight-color");
+    elements[1].style.setProperty("fill", "var(--icon-color");
+    elements[2].style.setProperty("fill", "var(--icon-color");
     html.addEventListener('mouseup', () =>{
-        icon.style.setProperty("fill", "#555555")
-    })
-})
+      elements[0].style.setProperty("fill", "var(--icon-color");
+      elements[1].style.setProperty("fill", "var(--icon-color");
+      elements[2].style.setProperty("fill", "var(--icon-color");
+      icon.style.setProperty("filter", "var(--icon-filter)");
+    });
+  });
+});

@@ -13,6 +13,8 @@
     --rectangles-background: rgba(38, 39, 40, 1);
     --icon-filter: brightness(0) invert();
     --gradient-color: rgba(26, 27, 28, 1);
+    --icon-color: rgba(255,255,255);
+    
 }
 
 .light:root{
@@ -24,6 +26,8 @@
     --rectangles-background: rgba(255, 255, 255, 1);
     --icon-filter: brightness(.1);
     --gradient-color: rgba(26, 27, 28, 1);
+
+    --icon-color: rgb(2, 7, 16);
 }
     
 html{ /*Suaviza o movimento ativado pelas ancoras de navegação*/
@@ -97,6 +101,10 @@ strong{ /*Destaque para negrito*/
 .icon:hover{
     filter: var(--icon-filter) drop-shadow(var(--shadow-color) 0px 0px 3px);
     transition: .3s ease;
+}
+
+#mouse__icon{
+    transition: 0s;
 }
 
 /*Cabeçalho*/
@@ -348,7 +356,7 @@ strong{ /*Destaque para negrito*/
     display: flex;
     flex-direction: column;
     height: fit-content;
-    padding: 8vh 10vw;
+    padding: 10vh 10vw;
     gap: 1em;
 }
 .main__projects__content {
@@ -360,14 +368,13 @@ strong{ /*Destaque para negrito*/
     justify-content: center;
     gap: 1.5em;
 }
-
 .main__projects__content__rectangle {
     display: flex;
     flex-direction: column;
     gap: 1.25em;
     border-radius: 1.5em;
     background-color: var(--rectangles-background);
-    width: 20em;
+    width: 30vw;
     flex: 1;
 
     transition: .5s ease;
@@ -405,7 +412,8 @@ strong{ /*Destaque para negrito*/
     display: flex;
     flex-direction: column;
     height: fit-content;
-    padding: 8vh 10vw;
+    margin-top: 5vh;
+    padding: 0 10vw;
     gap: 1em;
 }
 .main__contact__content{ /*Bloco da seção de contato*/
@@ -428,7 +436,7 @@ strong{ /*Destaque para negrito*/
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    height: 38vh;
+    height: 50vh;
     padding: 10vh;
 
     background: linear-gradient(180deg, rgba(26, 27, 28, 0.00) 0%, var(--shadow-color) 100%);
