@@ -85,6 +85,10 @@ strong{ /*Destaque para negrito*/
     transition: .3s ease;
 }
 
+/*botão Vlibras*/
+.access-button{
+
+}
 /*Cabeçalho*/
 .header {
     display: flex;
