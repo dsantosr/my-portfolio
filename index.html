@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="./sytles/reset.css">
     <link rel="stylesheet" type="text/css" href="./sytles/styles.css">
     <link rel="stylesheet" type="text/css" href="./sytles/theme.css">
+    <link rel="stylesheet" type="text/css" href="./sytles/burgerMenu.css">
     
     <script defer src="main.js"></script>
 </head>
@@ -47,14 +48,28 @@
                 <span class="toggle__theme__button__background"></span>
             </label>
 
-            <div class="header__hamburgerMenu">
-                <input class="header__hamburgerMenu__checkbox" type="checkbox" name="" id="" />
-                <div class="header__hamburgerMenu__hamburger-lines">
-                    <span class="header__hamburgerMenu__hamburger-lines--1"></span>
-                    <span class="header__hamburgerMenu__hamburger-lines--2"></span>
-                    <span class="header__hamburgerMenu__hamburger-lines--3"></span>
-                </div>
-            </div>
+            <label class="header__menu__burger">
+                <input type="checkbox" id="burger__button">
+                <li class="lines">
+                    <span class="line line1"></span>
+                    <span class="line line1"></span>
+                    <span class="line line1"></span>
+                </li>
+
+                <li class="header__menu__burger__content">
+                    <a class="header__menu__burger__content__link" href="#about">
+                        <p class="header__menu__burger__content__link__text" >Sobre</p> 
+                    </a>
+                    <a class="header__menu__burger__content__link" href="#projects">
+                        <p class="header__menu__burger__content__link__text" >Projetos</p> 
+                    </a>
+                    <a class="header__menu__burger__content__link" href="#contact">
+                        <p class="header__menu__burger__content__link__text" >Contato</p> 
+                    </a>
+                </li>
+                
+            </label>
+
         </nav>
         <div class="header__bottomBar">
             <div class="header__bottomBar__backgroundBar"></div>
@@ -113,66 +128,55 @@
                         <h3 class="main__skills__content__rectangle__text">C</h3>
                     </a>    
 
-
                     <a class="main__skills__content__rectangle"> 
                         <img src="/assets/java.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do java">
                         <h3 class="main__skills__content__rectangle__text">Java</h3>
                     </a>
-
-
-                    <a class="main__skills__content__rectangle"> 
-                        <img src="/assets/linux.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do linux">
-                        <h3 class="main__skills__content__rectangle__text">Ubuntu</h3>
-                    </a>
-
 
                     <a class="main__skills__content__rectangle"> 
                         <img src="/assets/python.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do python">
                         <h3 class="main__skills__content__rectangle__text">Pyhton</h3>
                     </a>
 
-
-                    <a class="main__skills__content__rectangle"> 
-                        <img src="/assets/git.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do git">
-                        <h3 class="main__skills__content__rectangle__text">Git</h3>
-                    </a>
-
-
-                    <a class="main__skills__content__rectangle"> 
-                        <img src="/assets/github.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do github">
-                        <h3 class="main__skills__content__rectangle__text">GitHub</h3>
-                    </a>
-
-
-                    <a class="main__skills__content__rectangle">
-                        <img src="/assets/illustrator.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do illustrator">
-                        <h3 class="main__skills__content__rectangle__text">Illustrator</h3>
-                    </a>
-
-
-                    <a class="main__skills__content__rectangle"> 
-                        <img src="/assets/aws.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do aws">
-                        <h3 class="main__skills__content__rectangle__text">AWS</h3>
-                    </a>
-
-
                     <a class="main__skills__content__rectangle"> 
                         <img src="/assets/html5.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do html5">
                         <h3 class="main__skills__content__rectangle__text">HTML5</h3>
                     </a>
-
 
                     <a class="main__skills__content__rectangle"> 
                         <img src="/assets/css3.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do css3">
                         <h3 class="main__skills__content__rectangle__text">CSS3</h3>
                     </a>
 
-
                     <a class="main__skills__content__rectangle"> 
                         <img src="/assets/javascript.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do javascript">
                         <h3 class="main__skills__content__rectangle__text">JavaScript</h3>
                     </a>
 
+                    <a class="main__skills__content__rectangle"> 
+                        <img src="/assets/linux.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do linux">
+                        <h3 class="main__skills__content__rectangle__text">Ubuntu</h3>
+                    </a>
+
+                    <a class="main__skills__content__rectangle"> 
+                        <img src="/assets/git.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do git">
+                        <h3 class="main__skills__content__rectangle__text">Git</h3>
+                    </a>
+
+                    <a class="main__skills__content__rectangle"> 
+                        <img src="/assets/github.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do github">
+                        <h3 class="main__skills__content__rectangle__text">GitHub</h3>
+                    </a>
+
+                    <a class="main__skills__content__rectangle"> 
+                        <img src="/assets/aws.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do aws">
+                        <h3 class="main__skills__content__rectangle__text">AWS</h3>
+                    </a>
+
+                    <a class="main__skills__content__rectangle">
+                        <img src="/assets/illustrator.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do illustrator">
+                        <h3 class="main__skills__content__rectangle__text">Illustrator</h3>
+                    </a>
 
                     <a class="main__skills__content__rectangle"> 
                         <img src="/assets/figma.svg" class="main__skills__content__rectangle__icon highlight_icon" alt="icone do figma">

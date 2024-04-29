@@ -144,9 +144,6 @@ strong{ /*Destaque para negrito*/
     background-color: var(--font-color);
     opacity: 0.1;
 }
-.header__hamburgerMenu{
-    display: none;
-}
 
 /*Seção de introdução*/
 .main__presentation{ 
@@ -499,7 +496,6 @@ strong{ /*Destaque para negrito*/
         --title-font-size: 1.5rem;
     }
 
-
     .main__presentation{
         padding: 0em 10vw 5vh;
     }
@@ -544,10 +540,6 @@ strong{ /*Destaque para negrito*/
         display: none;
     }
 
-    .header__hamburgerMenu{
-        display: block;
-    }
-
     .main__presentation__description{
         margin-right: 0;
         width: 100%;
@@ -560,7 +552,7 @@ strong{ /*Destaque para negrito*/
     .main__skills__content__rectangle{
         justify-content: center;
         width: 25vw;
-        height: 7em;
+        height: fit-content;
         border-radius: 0;
     }
     .main__skills__content__rectangle__icon{
@@ -603,9 +595,7 @@ strong{ /*Destaque para negrito*/
     .header{
         height: 3.2em;
     }
-    .header__hamburgerMenu{
-        display: none;
-    }
+
     .main__presentation{
         flex-wrap: wrap-reverse;
         flex-direction: row;

@@ -48,10 +48,6 @@
     display: block;
     background-color: var(--icon-color);
     border-radius: 50%;
-    
     z-index: -1;
     transition: 1s;
-}
-#theme__button:checked~.toggle{
-    background: var(--font-color);
 }
