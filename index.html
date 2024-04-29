@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dsantosr</title>
     <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-    <link rel="stylesheet" type="text/css" href="./styles/reset.css">
-    <link rel="stylesheet" type="text/css" href="./styles/styles.css">
-    <link rel="stylesheet" type="text/css" href="./styles/theme.css">
-    <link rel="stylesheet" type="text/css" href="./styles/burgerMenu.css">
+    <link rel="stylesheet" type="text/css" href="/styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="/styles/theme.css">
+    <link rel="stylesheet" type="text/css" href="/styles/burgerMenu.css">
     
     <script defer src="main.js"></script>
 </head>
@@ -48,27 +48,31 @@
                 <span class="toggle__theme__button__background"></span>
             </label>
 
-            <label class="header__menu__burger">
-                <input type="checkbox" id="burger__button">
-                <li class="lines">
-                    <span class="line line1"></span>
-                    <span class="line line1"></span>
-                    <span class="line line1"></span>
-                </li>
-
-                <li class="header__menu__burger__content">
-                    <a class="header__menu__burger__content__link" href="#about">
-                        <p class="header__menu__burger__content__link__text" >Sobre</p> 
+            <div class="header__menu__hamburguer">
+                <input type="checkbox">
+                <span class="header__menu__hamburguer__span1"></span>
+                <span class="header__menu__hamburguer__span2"></span>
+                <span class="header__menu__hamburguer__span3"></span>
+            
+                <ul class="header__menu__hamburguer__links">
+                    
+                    <a href="#" class="header__menu__hamburguer__links__link">
+                        <h1><strong>Início</strong></h1>
                     </a>
-                    <a class="header__menu__burger__content__link" href="#projects">
-                        <p class="header__menu__burger__content__link__text" >Projetos</p> 
+                    <a href="#about" class="header__menu__hamburguer__links__link">
+                        <h1><strong>Sobre Mim</strong></h1>
                     </a>
-                    <a class="header__menu__burger__content__link" href="#contact">
-                        <p class="header__menu__burger__content__link__text" >Contato</p> 
+                    <a href="#skills" class="header__menu__hamburguer__links__link">
+                        <h1><strong>Habilidades</strong></h1>
                     </a>
-                </li>
-                
-            </label>
+                    <a href="#projects" class="header__menu__hamburguer__links__link">
+                        <h1><strong>Projetos</strong></h1>
+                    </a>
+                    <a href="#contact" class="header__menu__hamburguer__links__link">
+                        <h1><strong>Contato</strong></h1>
+                    </a>
+                </ul>
+            </div>
 
         </nav>
         <div class="header__bottomBar">
@@ -78,19 +82,19 @@
     </header> 
 
     <main class="main">
-        <section class="main__presentation">
+        <section class="main__presentation" id="presentation">
             <div class="main__presentation__contact">
 
                 <a href="https://linkedin.com/in/dsantosr"
                 target="_blank"> 
-                    <img src="./assets/linkedin-icon.svg"
+                    <img src="/assets/linkedin-icon.svg"
                     class="main__presentation__contact__icon white__icon" 
                     alt="Icone do linkedin">
                 </a>
 
                 <a href="https://github.com/dsantosr"
                 target="_blank"> 
-                    <img src="./assets/github-white.svg"
+                    <img src="/assets/github-white.svg"
                     class="main__presentation__contact__icon white__icon" 
                     alt="Icone do github">
                 </a>
@@ -98,12 +102,12 @@
             </div>
             <div class="main__presentation__description">
                 <h1 class="main__presentation__description__name"> DANIEL <strong>DOS SANTOS</strong></h1>
-                <p> Estudante de Ciência da Computação aficionado por desenvolvimento de sistemas, pronto para contribuir com soluções eficientes.
+                <p class="main__presentation__description__p">
+                     Estudante de Ciência da Computação aficionado por desenvolvimento de sistemas, pronto para contribuir com soluções eficientes.
                 </p>
                 <a class="main__presentation__description__contact" href="#contact">Fale comigo</a>
             </div>
         </section>
-
         <section class="main__about" id="about">
             <h1><strong>Sobre</strong></h1>
             <div class="main__about__content">
@@ -117,8 +121,7 @@
                 </div>
             </div>
         </section>
-
-        <section class="main__skills">
+        <section class="main__skills" id="skills">
             <h2> Habilidades </h2>
             <div class="main__skills__content">
                 <div class="main__skills__content__rectangles">
@@ -186,8 +189,7 @@
                 </div>
             </div>
         </section>
-
-        <section class="main__certificates">
+        <section class="main__certificates" id="certificates">
             <h2>Certificados</h2>
             <div class="main__certificates__content">
                 <a class="main__certificates__content__rectangle"
@@ -246,7 +248,6 @@
                 </a>   
             </div>
         </section>
-
         <section class="main__projects" id="projects">
             <h1> <strong>Projetos</strong> </h1>
             <div class="main__projects__content">
@@ -336,7 +337,6 @@
 
             </div>
         </section>
-
         <section class="main__contact" id="contact">
             <h1> <strong>Contato</strong> </h1>
             <div class="main__contact__content">
@@ -370,12 +370,17 @@
         <div class="footer__content">
             <p class="footer__content__title">Desenvolvido por Daniel dos Santos.</p>
             <a  class="footer__content__link"
+                href="https://pt.vecteezy.com/videos-gratis/luz">
+                Background art by Vecteezy
+            </a>
+            <a  class="footer__content__link"
                 href="https://www.figma.com/community/file/1363979944489292651/portifolio-de-daniel-dos-santos">
                 <img src="/assets/url-icon.svg" 
                         class="footer__content__link__icon"
                             alt="Icone de url">
                 Projeto do figma
             </a>
+            
             
         </div>
     </footer>

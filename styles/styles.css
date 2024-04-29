@@ -121,6 +121,10 @@ strong{ /*Destaque para negrito*/
     color: var(--shadow-color);
     transition: .5s ease;
 }
+.header__menu__hamburguer, 
+.header__menu__hamburguer *{
+    display: none;
+}
 .header__bottomBar{
     position: absolute;
     bottom: 0;
@@ -146,7 +150,8 @@ strong{ /*Destaque para negrito*/
 }
 
 /*Seção de introdução*/
-.main__presentation{ 
+.main__presentation {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -154,14 +159,40 @@ strong{ /*Destaque para negrito*/
     align-content: center;
     padding: 4vh 15vw;
     gap: 28vw;
-
-    background-image: url(/assets/background-image.png);
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
     height: 100vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+    background-image: url('/assets/dark-background.png'); /* O tema padrão (escuro) */
 }
+.light .main__presentation:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    background-image: url('/assets/light-background.png'); /* Trocando para o tema claro */
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.6);
+    transition-delay: box-shadow 3s;
+    opacity: 1;
+    transition: all 2s;
+}
+.light .image-url-smooth:before {
+    opacity: 0;
+}
+
 .main__presentation__contact{ /*Atalhos para contato*/
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -177,6 +208,7 @@ strong{ /*Destaque para negrito*/
     height: 6vh;
 }
 .main__presentation__description{ /*Informações da seção de introdução*/
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 2em;
@@ -190,6 +222,12 @@ strong{ /*Destaque para negrito*/
     font-weight: 700;
 
     transition: .5s ease;
+}
+.light.main__presentation__description__name{
+    color: var(--icon-color);
+}
+.light.main__presentation__description__p{
+    color: var(--icon-color);
 }
 .main__presentation__description__contact{ /*Botão de convidativo para contato*/
     display: flex;

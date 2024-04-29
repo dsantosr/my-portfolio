@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-
 // Função para manipulação da logo para interação com mouse
 document.addEventListener('DOMContentLoaded', function() {
   let icon = document.querySelector('#mouse__icon');
