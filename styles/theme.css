@@ -15,6 +15,7 @@
     justify-content: center;
     align-items: center;    
     position: relative;
+    z-index: 10;
 }
 #theme__button{
     position: absolute;
@@ -50,10 +51,4 @@
     border-radius: 50%;
     z-index: -1;
     transition: 1s;
-}
-
-@media (max-width: 768px){
-    .header__menu__themeButton{
-        display: none;
-    }
 }

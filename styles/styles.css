@@ -121,6 +121,7 @@ strong{ /*Destaque para negrito*/
     color: var(--shadow-color);
     transition: .5s ease;
 }
+
 .header__menu__hamburguer, 
 .header__menu__hamburguer *{
     display: none;
