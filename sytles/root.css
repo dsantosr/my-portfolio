@@ -1,0 +1,28 @@
+:root{ /*Variaveis globais*/
+    --paragraph-font: "DM Sans", sans-serif;
+    --paragraph-font-size: 1.5rem;
+    --title-font-size: 3rem;
+
+    --background-color: rgb(26, 27, 28);
+    --font-color: rgba(223, 223, 223, 1);
+    --highlight-color: rgba(254, 199, 106, 1);
+    --shadow-color: rgba(254, 199, 106, 1);
+    --hover-color: rgba(61, 62, 66, 1);
+    --rectangles-background: rgba(38, 39, 40, 1);
+    --icon-filter: brightness(0) invert();
+    --gradient-color: rgba(26, 27, 28, 1);
+    --icon-color: rgba(255,255,255);
+}
+
+.light:root{
+    --background-color: rgba(239, 235, 235, 1);
+    --font-color: rgba(61, 62, 66, 1);
+    --highlight-color: rgba(21, 70, 155, 1);
+    --shadow-color: rgba(31, 135, 255, 1);
+    --hover-color: rgba(255, 255, 255, 1);
+    --rectangles-background: rgba(255, 255, 255, 1);
+    --icon-filter: brightness(.1);
+    --gradient-color: rgba(26, 27, 28, 1);
+
+    --icon-color: rgb(2, 7, 16);
+}

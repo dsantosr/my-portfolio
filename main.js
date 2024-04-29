@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 // Função para o a mudança de tema
 document.addEventListener('DOMContentLoaded', function() {
-  theme.addEventListener('click', function() {
+  theme__button.addEventListener('click', function() {
       body.forEach(element => {
           element.classList.toggle('light');
       });

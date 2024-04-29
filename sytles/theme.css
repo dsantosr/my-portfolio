@@ -1,0 +1,57 @@
+@import url('root.css');
+
+:root{
+    --circle-size: 2em;
+    --icon-size: 1.25em;
+}
+
+.header__menu__themeButton{
+    width: var(--circle-size);
+    height: var(--circle-size);
+    background-color: var(--font-color);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    position: relative;
+}
+#theme__button{
+    position: absolute;
+    opacity: 0;
+}
+.sun{
+    position: absolute;
+    font-size: var(--icon-size);
+    color: var(--background-color);
+    transform: scale(0);
+    transition: .6s ease;
+}
+#theme__button:checked~.sun{
+    transition-delay: .2s;
+    transform: scale(1) rotate(360deg);
+}
+.moon{
+    font-size: var(--icon-size);
+    color: var(--background-color);
+    transition: .6s ease;
+    transition-delay: .2s;
+}
+#theme__button:checked~.moon{
+    transition-delay: 0s;
+    transform: rotate(360deg) scale(0);
+}
+.toggle__theme__button__background{
+    width: var(--circle-size);
+    height: var(--circle-size);
+    position: absolute;
+    display: block;
+    background-color: var(--font-color);
+    border-radius: 50%;
+    
+    z-index: -1;
+    transition: 1s;
+}
+#theme__button:checked~.toggle{
+    background: var(--font-color);
+}

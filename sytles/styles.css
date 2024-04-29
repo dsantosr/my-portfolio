@@ -1,35 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('root.css');
 
-:root{ /*Variaveis globais*/
-    --paragraph-font: "DM Sans", sans-serif;
-    --paragraph-font-size: 1.5rem;
-    --title-font-size: 3rem;
-
-    --background-color: rgb(26, 27, 28);
-    --font-color: rgba(223, 223, 223, 1);
-    --highlight-color: rgba(254, 199, 106, 1);
-    --shadow-color: rgba(254, 199, 106, 1);
-    --hover-color: rgba(61, 62, 66, 1);
-    --rectangles-background: rgba(38, 39, 40, 1);
-    --icon-filter: brightness(0) invert();
-    --gradient-color: rgba(26, 27, 28, 1);
-    --icon-color: rgba(255,255,255);
-    
+/*Esconde a barra de rolamento lateral 
+(Suportado por Chrome, Edge, Opera e Safari.*/
+::-webkit-scrollbar { 
+    width: 0;
 }
 
-.light:root{
-    --background-color: rgba(239, 235, 235, 1);
-    --font-color: rgba(61, 62, 66, 1);
-    --highlight-color: rgba(21, 70, 155, 1);
-    --shadow-color: rgba(31, 135, 255, 1);
-    --hover-color: rgba(255, 255, 255, 1);
-    --rectangles-background: rgba(255, 255, 255, 1);
-    --icon-filter: brightness(.1);
-    --gradient-color: rgba(26, 27, 28, 1);
-
-    --icon-color: rgb(2, 7, 16);
-}
-    
 html{ /*Suaviza o movimento ativado pelas ancoras de navegação*/
     scroll-behavior: smooth;
 }
@@ -89,23 +66,23 @@ strong{ /*Destaque para negrito*/
     transition: .5s ease;
 }
 
-.light.highlight_icon{
+.light.highlight_icon{ /*Filtro dos icones coloridos para tema claro*/
     filter: invert();
     transition: .5s ease;
 }
 
-.icon{
+.white__icon{ /*Filtro dos icones brancos*/
     filter: var(--icon-filter);
     transition: .5s ease;
 }
 
-.icon:hover{
-    filter: var(--icon-filter) drop-shadow(var(--shadow-color) 0px 0px 3px);
-    transition: .3s ease;
+.light.white_icon{ /*Filtro dos icones brancos para tema claro*/
+    filter: invert();
 }
 
-#mouse__icon{
-    transition: 0s;
+.white__icon:hover{ /*Hover dos icones brancos*/
+    filter: var(--icon-filter) drop-shadow(var(--shadow-color) 0px 0px 3px);
+    transition: .3s ease;
 }
 
 /*Cabeçalho*/
@@ -127,8 +104,8 @@ strong{ /*Destaque para negrito*/
     transition: .5s ease;
 }
 .header__logo{ /*Logo do cabeçalho*/
-    width: 4vh;
-    height: 4vh;
+    width: 2em;
+    height: 2em;
     margin: 2vh 0em;
 }
 .header__menu{ /*Menu do cabeçalho*/
@@ -269,10 +246,14 @@ strong{ /*Destaque para negrito*/
 
     transition: .5s ease;
 }
-.main__about__content__text{ /*Paragrafos da seção sobre*/
+.main__about__content__texts{ /*Paragrafos da seção sobre*/
     display: flex;
     flex-direction: column;
     gap: 1em;
+}
+.main__about__content__text{
+    text-align: justify;
+    text-justify: inter-cluster;
 }
 
 /*Seção de habilidades*/
@@ -286,6 +267,7 @@ strong{ /*Destaque para negrito*/
 .main__skills__content{ 
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     padding: 0 7vw 0;
     gap: 2em;
@@ -300,7 +282,6 @@ strong{ /*Destaque para negrito*/
     gap: 1.25em;
     position: relative;
 }
-
 .main__skills__content__rectangles__gradient{
     position: absolute;
     top: 0;
@@ -310,7 +291,6 @@ strong{ /*Destaque para negrito*/
     background: linear-gradient(90deg, var(--background-color) 5%, rgba(255,255,255,0) 50%, var(--background-color) 95%);
     transition: all 3s ease;
 }
-
 .main__skills__content__rectangle{ /*Retangulo*/
     display: flex;
     flex-direction: column;
@@ -333,7 +313,6 @@ strong{ /*Destaque para negrito*/
 .main__skills__content__rectangle__text{
     filter: invert(0);
 }
-
 
 /*Seção de certificados*/
 .main__certificates{ 
@@ -382,7 +361,7 @@ strong{ /*Destaque para negrito*/
 
     transition: .5s ease;
 }
-.main__certificates__content__rectangle__icon{
+.main__certificates__content__rectangle__icon{ /*Icone da empresa emissora do certificado*/
     width: 1.5vw;
 }
 
@@ -394,13 +373,13 @@ strong{ /*Destaque para negrito*/
     padding: 10vh 7vw 0;
     gap: 2em;
 }
-.main__projects__content {
+.main__projects__content { /*Bloco da seção de projetos*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1.5em;
 }
-.main__projects__content__rectangle {
+.main__projects__content__rectangle { /*Retangulo da seção de projeto*/
     display: flex;
     flex-direction: column;
     
@@ -413,33 +392,32 @@ strong{ /*Destaque para negrito*/
 
     transition: .5s ease;
 }
-.main__projects__content__rectangle:hover{
+.main__projects__content__rectangle:hover{ /*HOVER: Retangulo da seção de projeto*/
     filter: drop-shadow(var(--highlight-color) 0px 0px 2px);
     background-color: var(--hover-color);
 
     transition: .5s ease;
 }
-.main__projects__content__rectangle__img{
+.main__projects__content__rectangle__img{ /*Imagem do projeto*/
     border-top-left-radius: 1.5em;
     border-top-right-radius: 1.5em;
 }
-.main__projects__content__rectangle__header{
+.main__projects__content__rectangle__header{ /*Título do projeto*/
     display: flex;
     flex-direction: row;
     padding: 0em 2em;
     gap: 1em;
 }
-.main__projects__content__rectangle__header__icon{
+.main__projects__content__rectangle__header__icon{ /*Ícone de url*/
     height: auto;
 }
-.main__projects__content__rectangle__header__text{
+.main__projects__content__rectangle__header__text{ /*Descrição do projeto*/
     font-size: 1.25rem;
 }
 .main__projects__content__rectangle__description{
     font-size: 1rem;
     padding: 0em 1.5em 1.5em 1.5em;
 }
-
 
 /*Seção de contato*/
 .main__contact{
@@ -521,12 +499,9 @@ strong{ /*Destaque para negrito*/
         --title-font-size: 1.5rem;
     }
 
+
     .main__presentation{
         padding: 0em 10vw 5vh;
-    }
-
-    .main__certificates__content__rectangle{
-        height: 4em;
     }
 
     .main__about__content{
@@ -535,12 +510,25 @@ strong{ /*Destaque para negrito*/
     .main__about__content__rectangle{
         width: 7em;
     }
+    .main__about__content__text{
+        font-size: 1em;
+    }
+
+    .main__skills__content__rectangle{
+        height: 7em;
+    }
+    .main__skills__content__rectangle__text{
+        font-size: 1rem;
+    }
+
+    .main__certificates__content__rectangle{
+        height: 4em;
+    }
 
     .footer__content__title{
         text-align: center;
         font-size: .9rem;
     }
-
 }
 
 /* For Tablets or iPad*/
@@ -566,8 +554,18 @@ strong{ /*Destaque para negrito*/
         height: fit-content;
     }
 
+    .main__skills__content__rectangles{
+        column-gap: 0;
+    }
     .main__skills__content__rectangle{
-        width: 100%;
+        justify-content: center;
+        width: 25vw;
+        height: 10em;
+        border-radius: 0;
+    }
+    .main__skills__content__rectangle__icon{
+        width: 12vw;
+        height: 12vw;
     }
 
     .main__certificates__content__rectangle{
@@ -602,7 +600,9 @@ strong{ /*Destaque para negrito*/
         --paragraph-font-size: 1.5rem;
         --title-font-size: 3rem;
     }
-
+    .header{
+        height: 3.2em;
+    }
     .header__hamburgerMenu{
         display: none;
     }

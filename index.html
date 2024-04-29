@@ -8,11 +8,13 @@
     <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
     <link rel="stylesheet" type="text/css" href="./sytles/reset.css">
     <link rel="stylesheet" type="text/css" href="./sytles/styles.css">
+    <link rel="stylesheet" type="text/css" href="./sytles/theme.css">
+    
     <script defer src="main.js"></script>
 </head>
 
 <body>
-    
+
     <div vw class="vlibras-plugin enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -23,7 +25,7 @@
     <header class="header">
         <a href="#">
 
-            <svg class="header__logo icon" id="mouse__icon" width="56" height="54" viewBox="0 0 56 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="header__logo white_icon" id="mouse__icon" width="56" height="54" viewBox="0 0 56 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M31.9259 0H0L2.91356 15.5564C3.60962 19.2728 3.95765 21.131 4.91146 22.5227C5.75243 23.7497 6.91886 24.718 8.27973 25.3187C9.82319 26 11.7137 26 15.4948 26H24.1326C24.9728 22.6022 29.7032 20 35.4128 20C41.1224 20 45.8527 22.6022 46.6929 26H54.0741C55.1377 26 56 25.1377 56 24.0741C56 10.7783 45.2217 0 31.9259 0Z" fill="#D9D9D9"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M24.0947 28H15.4948C11.7137 28 9.82319 28 8.27973 28.6813C6.91886 29.282 5.75243 30.2503 4.91146 31.4773C3.95765 32.869 3.60962 34.7272 2.91356 38.4436L0 54H31.9259C45.2217 54 56 43.2217 56 29.9259C56 28.8623 55.1377 28 54.0741 28H46.7308C46.0065 31.479 41.2154 34.1667 35.4128 34.1667C29.6102 34.1667 24.819 31.479 24.0947 28Z" fill="#D9D9D9"/>
                 <rect x="27" y="23.5" width="17" height="7" rx="3" fill="#D9D9D9"/>
@@ -37,7 +39,14 @@
                 <p class="header__menu__link__text" >Projetos</p> </a>
             <a class="header__menu__link" href="#contact">
                 <p class="header__menu__link__text" >Contato</p> </a>
-            <input type="checkbox" class="header__menu__themeButton" id="theme">
+            
+            <label class="header__menu__themeButton">
+                <input type="checkbox" id="theme__button">
+                <ion-icon name="sunny" class="sun"></ion-icon>
+                <ion-icon name="moon" class="moon"></ion-icon>
+                <span class="toggle__theme__button__background"></span>
+            </label>
+
             <div class="header__hamburgerMenu">
                 <input class="header__hamburgerMenu__checkbox" type="checkbox" name="" id="" />
                 <div class="header__hamburgerMenu__hamburger-lines">
@@ -60,14 +69,14 @@
                 <a href="https://linkedin.com/in/dsantosr"
                 target="_blank"> 
                     <img src="./assets/linkedin-icon.svg"
-                    class="main__presentation__contact__icon icon" 
+                    class="main__presentation__contact__icon white__icon" 
                     alt="Icone do linkedin">
                 </a>
 
                 <a href="https://github.com/dsantosr"
                 target="_blank"> 
                     <img src="./assets/github-white.svg"
-                    class="main__presentation__contact__icon icon" 
+                    class="main__presentation__contact__icon white__icon" 
                     alt="Icone do github">
                 </a>
                 
@@ -84,11 +93,11 @@
             <h1><strong>Sobre</strong></h1>
             <div class="main__about__content">
                 <span class="main__about__content__rectangle"></span>
-                <div class="main__about__content__text">
-                    <p>Olá! Sou Daniel, um bolsista no Jovem  Tech, programa promovido pelo Grupo Mateus e Governo do Maranhão, e estudante  de Ciência da Computação na Universidade Federal do Maranhão. Estou em  formação para seguir a carreira de desenvolvedor backend.</p>
-                    <p>
+                <div class="main__about__content__texts">
+                    <p class="main__about__content__text">Olá! Sou Daniel, um bolsista no Jovem  Tech, programa promovido pelo Grupo Mateus e Governo do Maranhão, e estudante  de Ciência da Computação na Universidade Federal do Maranhão. Estou em  formação para seguir a carreira de desenvolvedor backend.</p>
+                    <p class="main__about__content__text">
                     Na  UFMA, aprendo os fundamentos teóricos e práticos da área, como algoritmos,  compiladores, estruturas de dados, redes de computadores, paradigmas de  programação, arquitetura de software, sistemas operacionais e  inteligência artificial.</p>
-                    <p>
+                    <p class="main__about__content__text">
                     Sou um entusiasta da tecnologia, sempre  buscando me atualizar sobre as tendências e novidades do mercado. Assim  sendo, estou sempre disposto a adquirir novas habilidades e  conhecimentos que possam me ajudar a crescer profissionalmente e  pessoalmente.</p>
                 </div>
             </div>
@@ -332,7 +341,7 @@
                     <img 
                         src="/assets/linkedin-icon.svg" 
                         id="icon"
-                        class="contact__img icon" 
+                        class="contact__img white_icon" 
                         alt="logo do linkedin">
                     <p class="main__contact__content__link__text">
                         linkedin.com/in/dsantosr
@@ -343,7 +352,7 @@
                     <img 
                         src="/assets/mail.svg" 
                         id="icon"
-                        class="contact__img icon" 
+                        class="contact__img white_icon" 
                         alt="icone de e-mail">
                     <p class="main__contact__content__link__text">
                         danielsantrodrigues42@gmail.com
@@ -366,7 +375,9 @@
             
         </div>
     </footer>
-    
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
