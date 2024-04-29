@@ -560,7 +560,7 @@ strong{ /*Destaque para negrito*/
     .main__skills__content__rectangle{
         justify-content: center;
         width: 25vw;
-        height: 10em;
+        height: 7em;
         border-radius: 0;
     }
     .main__skills__content__rectangle__icon{

@@ -8,7 +8,7 @@
 .header__menu__themeButton{
     width: var(--circle-size);
     height: var(--circle-size);
-    background-color: var(--font-color);
+    background-color: var(--icon-color);
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -46,7 +46,7 @@
     height: var(--circle-size);
     position: absolute;
     display: block;
-    background-color: var(--font-color);
+    background-color: var(--icon-color);
     border-radius: 50%;
     
     z-index: -1;
