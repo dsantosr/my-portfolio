@@ -85,10 +85,6 @@ strong{ /*Destaque para negrito*/
     transition: .3s ease;
 }
 
-/*botão Vlibras*/
-.access-button{
-
-}
 /*Cabeçalho*/
 .header {
     display: flex;
@@ -186,6 +182,7 @@ strong{ /*Destaque para negrito*/
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
+    background-attachment: fixed;
     background-image: url('/assets/light-background.png'); /* Trocando para o tema claro */
     box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.6);
     transition-delay: box-shadow 3s;
