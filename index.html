@@ -24,7 +24,7 @@
     </div>
 
     <header class="header">
-        <a href="#">
+        <a href="#presentation">
 
             <svg class="header__logo white_icon" id="mouse__icon" width="56" height="54" viewBox="0 0 56 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M31.9259 0H0L2.91356 15.5564C3.60962 19.2728 3.95765 21.131 4.91146 22.5227C5.75243 23.7497 6.91886 24.718 8.27973 25.3187C9.82319 26 11.7137 26 15.4948 26H24.1326C24.9728 22.6022 29.7032 20 35.4128 20C41.1224 20 45.8527 22.6022 46.6929 26H54.0741C55.1377 26 56 25.1377 56 24.0741C56 10.7783 45.2217 0 31.9259 0Z" fill="#D9D9D9"/>
@@ -42,35 +42,45 @@
                 <p class="header__menu__link__text" >Contato</p> </a>
             
             <label class="header__menu__themeButton">
-                <input type="checkbox" id="theme__button">
-                <ion-icon name="sunny" class="sun"></ion-icon>
-                <ion-icon name="moon" class="moon"></ion-icon>
+                <input type="checkbox" id="theme__button" placeholder="botao de tema">
+                <ion-icon name="sunny" class="sun" alt="Simbolo do Sol"></ion-icon>
+                <ion-icon name="moon" class="moon" alt="Simbolo da Lua"></ion-icon>
                 <span class="toggle__theme__button__background"></span>
             </label>
 
             <label class="header__menu__hamburguer">
-                <input type="checkbox">
+                <input type="checkbox" placeholder="hamburger menu">
                 <span class="header__menu__hamburguer__span1"></span>
                 <span class="header__menu__hamburguer__span2"></span>
                 <span class="header__menu__hamburguer__span3"></span>
             
                 <ul class="header__menu__hamburguer__links">
+                    <li>
+                        <a href="#" class="header__menu__hamburguer__links__link">
+                            <h1><strong class="header__links__menu__hamburguer">Início</strong></h1>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" class="header__menu__hamburguer__links__link">
+                            <h1><strong class="header__links__menu__hamburguer">Sobre Mim</strong></h1>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#skills" class="header__menu__hamburguer__links__link">
+                            <h1><strong class="header__links__menu__hamburguer">Habilidades</strong></h1>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="header__menu__hamburguer__links__link">
+                            <h1><strong class="header__links__menu__hamburguer">Projetos</strong></h1>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="header__menu__hamburguer__links__link">
+                            <h1><strong class="header__links__menu__hamburguer">Contato</strong></h1>
+                        </a>
+                    </li>          
                     
-                    <a href="#" class="header__menu__hamburguer__links__link">
-                        <h1><strong class="header__links__menu__hamburguer">Início</strong></h1>
-                    </a>
-                    <a href="#about" class="header__menu__hamburguer__links__link">
-                        <h1><strong class="header__links__menu__hamburguer">Sobre Mim</strong></h1>
-                    </a>
-                    <a href="#skills" class="header__menu__hamburguer__links__link">
-                        <h1><strong class="header__links__menu__hamburguer">Habilidades</strong></h1>
-                    </a>
-                    <a href="#projects" class="header__menu__hamburguer__links__link">
-                        <h1><strong class="header__links__menu__hamburguer">Projetos</strong></h1>
-                    </a>
-                    <a href="#contact" class="header__menu__hamburguer__links__link">
-                        <h1><strong class="header__links__menu__hamburguer">Contato</strong></h1>
-                    </a>
                 </ul>
             </label>
 
