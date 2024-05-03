@@ -14,7 +14,6 @@ html{ /*Suaviza o movimento ativado pelas ancoras de navegação*/
 body{ /*Corpo do site*/
     display: flex;
     flex-direction: column;
-    gap: 10em;
     background-color: var(--background-color);
     transition: all .5s ease;
 }
@@ -488,7 +487,7 @@ strong{ /*Destaque para negrito*/
     align-items: center;
     justify-content: flex-end;
     height: 40vh;
-
+    margin-bottom: 10em;
     background: linear-gradient(180deg, rgba(26, 27, 28, 0.00) 0%, var(--shadow-color) 100%);
     background-repeat: no-repeat;
     transition: .5s ease;
