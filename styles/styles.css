@@ -167,7 +167,7 @@ strong{ /*Destaque para negrito*/
     background-position: 50% 0;
     background-size: cover;
     background-attachment: fixed;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.8);
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
     background-image: url('/assets/dark-background.png'); /* O tema padrão (escuro) */
 }
 .light .main__presentation:before {
@@ -462,7 +462,6 @@ strong{ /*Destaque para negrito*/
     height: fit-content;
     padding: 10vh 7vw 0;
     gap: 2em;
-
     height: 40vh;
 }
 .main__contact__content{ /*Bloco da seção de contato*/
@@ -487,7 +486,6 @@ strong{ /*Destaque para negrito*/
     align-items: center;
     justify-content: flex-end;
     height: 40vh;
-    margin-bottom: 10em;
     background: linear-gradient(180deg, rgba(26, 27, 28, 0.00) 0%, var(--shadow-color) 100%);
     background-repeat: no-repeat;
     transition: .5s ease;
