@@ -22,12 +22,9 @@
     width: 3em;
     height: 3em;
     position: absolute;
-
     cursor: pointer;
-
     opacity: 0; /* hide this */
     z-index: 2; /* and place it over the hamburger */
-
 }
 
 /*Ícone*/
@@ -92,7 +89,7 @@
     height: fit-content;
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
-    padding: 6vh 0 0 6vw;
+    padding: 6vh 6vw 0 6vw;
 }
 
 .header__menu__hamburguer input:checked ~ .header__menu__hamburguer__links {

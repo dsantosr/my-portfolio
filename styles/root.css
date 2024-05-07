@@ -15,14 +15,14 @@
 }
 
 .light:root{
-    --background-color: rgba(239, 235, 235, 1);
+    --background-color: rgb(239, 235, 235);
     --font-color: rgba(61, 62, 66, 1);
     --highlight-color: rgba(21, 70, 155, 1);
-    --shadow-color: rgba(31, 135, 255, 1);
+    --shadow-color: rgb(31, 135, 255);
     --hover-color: rgba(255, 255, 255, 1);
     --rectangles-background: rgba(255, 255, 255, 1);
     --icon-filter: brightness(.1);
     --gradient-color: rgba(26, 27, 28, 1);
-
+    
     --icon-color: rgb(2, 7, 16);
 }
